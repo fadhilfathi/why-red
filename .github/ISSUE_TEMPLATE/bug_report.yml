@@ -1,0 +1,46 @@
+name: Bug report
+description: Something in why-red itself is broken.
+title: "[bug]: "
+labels: [bug]
+body:
+  - type: input
+    id: run
+    attributes:
+      label: Run URL or ID
+      description: Must be a public run.
+      placeholder: https://github.com/org/repo/actions/runs/18234567890
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: why-red --version output
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: json
+    attributes:
+      label: --json output
+      description: Optional. Output of `why-red <run-id> --json`.
+      render: json
+    validations:
+      required: false
+  - type: checkboxes
+    id: redacted
+    attributes:
+      label: Confirmation
+      options:
+        - label: I redacted secrets from anything pasted above.
+          required: true

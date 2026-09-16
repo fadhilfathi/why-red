@@ -1,0 +1,40 @@
+name: Misclassification
+description: why-red assigned the wrong failure class. This feeds the fixture corpus.
+title: "[misclassification]: "
+labels: [misclassification]
+body:
+  - type: input
+    id: run
+    attributes:
+      label: Run URL or ID
+      description: Must be a public run.
+      placeholder: https://github.com/org/repo/actions/runs/18234567890
+    validations:
+      required: true
+  - type: input
+    id: reported
+    attributes:
+      label: Class reported by why-red
+    validations:
+      required: true
+  - type: input
+    id: expected
+    attributes:
+      label: Class you expected
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Log lines that prove the expected class
+      description: Paste the relevant lines, redacted of any secrets.
+      render: text
+    validations:
+      required: true
+  - type: checkboxes
+    id: contribute
+    attributes:
+      label: Fixture contribution
+      options:
+        - label: I'm willing to contribute this as a redacted fixture (see CONTRIBUTING.md).
+          required: false
