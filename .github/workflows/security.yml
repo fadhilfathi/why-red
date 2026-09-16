@@ -48,7 +48,7 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - name: Verify all actions are pinned to a commit SHA
         run: |
-          offenders=$(grep -rEn 'uses:\s*[^[:space:]]+@[^[:space:]]+' .github/workflows \
+          offenders=$(grep -rEn '^[[:space:]]*-?[[:space:]]*uses:' .github/workflows \
             | grep -vE '@[0-9a-f]{40}([[:space:]]|$)' || true)
           if [ -n "$offenders" ]; then
             echo "Unpinned actions found:"
