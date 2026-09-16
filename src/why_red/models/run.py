@@ -39,6 +39,7 @@ class Step(_Model):
 class Job(_Model):
     id: int
     name: str
+    status: str = "unknown"
     conclusion: Conclusion = Conclusion.UNKNOWN
     started_at: datetime | None = None
     completed_at: datetime | None = None
@@ -56,8 +57,12 @@ class Run(_Model):
     event: str
     head_branch: str | None = None
     head_sha: str
+    status: str = Field(default="unknown", description="queued | in_progress | completed.")
     conclusion: Conclusion = Conclusion.UNKNOWN
     created_at: datetime | None = None
+    updated_at: datetime | None = Field(
+        default=None, description="Part of the cache key: a re-run changes it."
+    )
     html_url: str | None = None
     jobs: list[Job] = Field(default_factory=list)
 
@@ -75,4 +80,9 @@ class Location(_Model):
     other_failed_steps: list[int] = Field(
         default_factory=list,
         description="Step numbers that also failed but were not chosen (e.g. cleanup).",
+    )
+    line_range: tuple[int, int] | None = Field(
+        default=None,
+        description="1-based inclusive line span of this step in the raw job log, "
+        "derived from timestamps; None when the log is unavailable.",
     )
