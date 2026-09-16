@@ -12,7 +12,7 @@ run id
   |
   v
 [1 fetch]   gh api  -> Run (jobs, steps, conclusions) + raw log text per job
-  |           cache: ~/.cache/why-red/<run-id>/  (metadata.json, <job-id>.log)
+  |           cache: <cache>/<owner>__<name>/<run-id>/<updated_at>/ (run.json, <job-id>.log)
   v
 [2 locate]  Run -> Location (failing job + step + reason)
   |
@@ -56,10 +56,20 @@ testable in isolation with a fixture on disk.
   `GET /repos/{owner}/{repo}/actions/jobs/{job_id}/logs` (302 to a zip/plain log).
 - Read-only. There is no code path that issues POST/PATCH/DELETE. A test greps
   the fetch module for those verbs.
-- Cache keyed by run id under the platform cache directory. Second invocation
-  makes zero network calls (tested with a fake `gh` on PATH).
+- Cache keyed by run id AND the run's `updated_at`, under the platform cache
+  directory (`%LOCALAPPDATA%\why-red` on Windows, `$XDG_CACHE_HOME/why-red` or
+  `~/.cache/why-red` elsewhere). `--cache-dir` overrides, `--no-cache` bypasses.
+  Every invocation makes the two metadata calls (run, jobs); the job log is
+  served from disk when `updated_at` is unchanged, so a re-run never reads a
+  stale log. Only the located job's log is fetched: a 22-leg matrix at ~3 s per
+  log is not worth waiting for up front. Tested with a fake `gh` on PATH.
 - Repo is resolved from `--repo`, else from `git remote get-url origin` in cwd.
   The run id alone is not globally routable in the REST API.
+- `--fixture DIR` reads a cache entry or a committed fixture instead of GitHub.
+  Fixtures and cache entries have the same layout on purpose.
+- What the API really does (BOM, CRLF on Windows runners, 200-with-XML for
+  in-progress jobs, 410 for expired logs, non-contiguous step numbers) is
+  recorded with measurements in docs/API_NOTES.md.
 
 ### 2. Locate (`locate/`)
 
@@ -69,17 +79,30 @@ Selection rule, in order (the `reason` field names which rule fired):
 
 1. Jobs with `conclusion == failure`; if a matrix, each leg is its own job.
 2. Within the job, candidate steps are those with `conclusion == failure`.
-3. Drop steps that are `continue-on-error` (GitHub reports these as `success`
-   at job level but the step log still says failure; the step-level
-   conclusion is what we trust).
-4. Drop post-steps (`Post <name>`) and steps whose name matches a cleanup
-   pattern (`Post `, `Cleanup`, `Upload artifact`, `Stop containers`) when an
-   earlier failed step exists. They are recorded in `other_failed_steps`.
-5. Pick the earliest remaining failed step. Earlier failures cause later ones.
-6. If no step failed but the job did (runner lost, startup_failure,
-   timed_out at job level): `Location` with `step_number` of the last step
-   that started and `reason = "job failed without a failing step"`.
-7. If nothing failed at all (run cancelled, all green): `None`.
+3. The API does not expose `continue-on-error`. The only signal is what
+   happened next: a real failure skips the steps after it, a
+   continue-on-error failure does not. With several failed steps, the first
+   one followed by a skipped step (or by nothing but post steps) wins.
+4. Post steps (`Post <name>`, `Complete job`) and steps whose name matches a
+   cleanup pattern (`cleanup`, `upload artifact/report/coverage`, `stop
+   containers`) are dropped when any other failed step exists. They are
+   recorded in `other_failed_steps`. If only such steps failed, they are the
+   failure.
+5. Otherwise the earliest remaining failed step. Earlier failures cause
+   later ones.
+6. If no step failed but the job did (`failure`, `timed_out`,
+   `startup_failure`, `cancelled` at job level): the last step that started,
+   or step 1 named `(no steps reported)` for a job with zero steps, with a
+   reason that says so.
+7. If nothing failed at all (all green): `None`.
+
+Step-to-line mapping (`Location.line_range`): lines are assigned by comparing
+their timestamp, truncated to the second, with the step's `started_at` and
+`completed_at`. Inside the shared start second the last `##[group]Run` /
+`Post job cleanup.` marker opens the step; inside the shared end second the
+first such marker closes it. Measured reason: one shared second held 48 lines
+of the previous step. The run-level logs zip no longer carries per-step files,
+so there is no exact source (see API_NOTES.md).
 
 ### 3. Classify (`classify/engine.py`, `classify/rules/`)
 
@@ -198,6 +221,7 @@ class Step(_Model):
 class Job(_Model):
     id: int
     name: str
+    status: str = "unknown"      # queued | in_progress | completed
     conclusion: Conclusion = Conclusion.UNKNOWN
     started_at: datetime | None = None
     completed_at: datetime | None = None
@@ -214,8 +238,10 @@ class Run(_Model):
     event: str
     head_branch: str | None = None
     head_sha: str
+    status: str = "unknown"      # queued | in_progress | completed
     conclusion: Conclusion = Conclusion.UNKNOWN
     created_at: datetime | None = None
+    updated_at: datetime | None = None   # part of the cache key
     html_url: str | None = None
     jobs: list[Job] = []
 
@@ -226,6 +252,7 @@ class Location(_Model):
     step_name: str
     reason: str                  # min_length=1; names the locate rule that fired
     other_failed_steps: list[int] = []
+    line_range: tuple[int, int] | None = None   # 1-based inclusive span in the raw log
 ```
 
 ### `models/failure.py`
