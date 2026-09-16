@@ -1,0 +1,13 @@
+{
+  "pytest-test-failure-matrix": {
+    "harvested_at": "2026-09-16T14:29:05Z",
+    "head_sha": "de5d6be4171266f7fa48d1e25b0c5f2269634e5b",
+    "jobs": [
+      104401099719
+    ],
+    "repo": "pytest-dev/pytest",
+    "run_attempt": 1,
+    "run_id": 34964800998,
+    "url": "https://github.com/pytest-dev/pytest/actions/runs/34964800998"
+  }
+}
