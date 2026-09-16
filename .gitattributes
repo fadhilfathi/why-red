@@ -1,0 +1,3 @@
+* text=auto eol=lf
+# Fixture logs are evidence: keep every byte, including CRLF from Windows runners.
+fixtures/cases/** -text
