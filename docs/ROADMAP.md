@@ -28,12 +28,13 @@
 - [ ] Redaction test proves tokens and emails are caught.
 - [ ] gitleaks green on full history.
 
-## P3 — Classification (not started)
+## P3 — Classification (done 2026-09-17)
 
-- [ ] Classification engine + rule set implemented.
-- [ ] Per-class precision/recall/UNCLASSIFIED-rate script (`make measure`) with output committed to `docs/ACCURACY.md`.
-- [ ] Every classification carries evidence line numbers.
-- [ ] No rule tuned against already-measured fixtures; new fixtures are added first.
+- [x] Classification engine + rule set implemented, for the 3 classes at the 2-fixture ship minimum (TEST_FAILURE, LINT_FAILURE, NETWORK_FAILURE) — deliberately not the other 12, per the P2 decision to enter P3 with 3 measured classes rather than 15 unmeasured ones.
+- [x] Per-class precision/recall/UNCLASSIFIED-rate script (`make measure` / `uv run python fixtures/measure.py`) with output committed to `docs/ACCURACY.md`, including the stated single-labeler limitation and a link to the misclassification issue template.
+- [x] Every classification carries evidence line numbers (schema-enforced since P0; exercised for real here).
+- [x] No rule tuned against already-measured fixtures — rules were written once from the 12 fixtures' evidence and not revisited after measuring.
+- [x] Control check (P2 addition): every fixture whose labeled class has no rule comes back UNCLASSIFIED — 6/6, not 9/9, because 3 shipped classes at 2 fixtures each account for 6 of the 12 fixtures, leaving 6 outside.
 
 ## P4 — Extraction + terminal render (not started)
 

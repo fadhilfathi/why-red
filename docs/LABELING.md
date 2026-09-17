@@ -149,7 +149,7 @@ as `UNCLASSIFIED` in P3, with the sourcing difficulty stated in the README.
 | Class | Fixtures | Ships in P3? |
 |---|---|---|
 | TEST_FAILURE | 2 (min) | yes |
-| LINT_FAILURE | 2 (min) | yes |
+| LINT_FAILURE | 2 (min, weak — see note) | yes |
 | NETWORK_FAILURE | 2 (min) | yes |
 | DEPENDENCY_RESOLUTION | 1 | no — one short |
 | COMPILATION_ERROR | 1 | no — one short |
@@ -169,6 +169,17 @@ minimum. Growing it is ongoing work per the roadmap, not a P2 gate; P3 ships
 classification for the 3 rows above the line and reports the other 12 as
 `UNCLASSIFIED` honestly, which is the outcome this document was written to
 make acceptable rather than something to paper over.
+
+**LINT_FAILURE's count is softer than it looks.** Both fixtures
+(`vite-eslint-failure`, `vite-eslint-failure-2`) are the same eslint rule set
+failing on the same repo two days apart — the fixture-selection priority of
+"failure-mode diversity over count" was not met for this class the way it was
+for TEST_FAILURE (pytest vs. a different pytest-based repo) or NETWORK_FAILURE
+(the same signature, but at least two independent runs of a different repo).
+Kept both anyway: dropping either one puts LINT_FAILURE below ship minimum,
+and each still genuinely exercises the pipeline on real output. Replace
+`vite-eslint-failure-2` with a differently-shaped lint failure (a different
+tool or language) when one turns up.
 
 Why each 0-count class was hard to source publicly in this pass:
 

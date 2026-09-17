@@ -36,11 +36,14 @@ Read-only: never comments, reruns, or cancels.
 
 ## Failure classes
 
-Ships in P3 means the class has at least 2 real, hand-labeled fixtures in the
-committed corpus (the minimum to avoid tuning a rule to a single example — see
-`docs/LABELING.md`). A class below that bar is still recognised here, but
-`why-red` reports `UNCLASSIFIED` for it rather than guess: an honest "I don't
-know" beats a confidently wrong diagnosis.
+3 of 15 classes ship a rule as of this writing. "Ships" means the class has
+at least 2 real, hand-labeled fixtures in the committed corpus (the minimum
+to avoid tuning a rule to a single example — see `docs/LABELING.md`). A
+class below that bar is still recognised here, but `why-red` reports
+`UNCLASSIFIED` for it rather than guess: a tool that classifies three things
+correctly beats one that guesses at fifteen, and an honest "I don't know"
+beats a confidently wrong diagnosis. Growing the corpus to cover more
+classes is ongoing work, not a release gate.
 
 | Class | Meaning | Ships in P3? |
 |---|---|---|
@@ -55,7 +58,7 @@ know" beats a confidently wrong diagnosis.
 | RATE_LIMITED | A request was rejected for exceeding a rate limit. | not yet (0 fixtures — same reason as AUTH_FAILURE) |
 | NETWORK_FAILURE | A network request failed (DNS, connection reset, unreachable). | yes |
 | CACHE_MISS | A required cache was missing or invalid. | not yet (0 fixtures — cache misses are common in logs but a later failure clearly *caused by* one is not) |
-| LINT_FAILURE | A linter or formatter check failed. | yes |
+| LINT_FAILURE | A linter or formatter check failed. | yes (both fixtures are the same eslint rule set two days apart — weaker diversity than the other two shipped classes; see `docs/LABELING.md`) |
 | MISSING_SECRET | A required secret or environment variable was absent. | not yet (1 fixture — this one fails loudly when it happens; it is finding a second public example, not the class itself, that is slow) |
 | CONFIG_ERROR | Workflow or tool configuration was invalid. | not yet (1 fixture) |
 | INFRASTRUCTURE | Failure originated in GitHub's infrastructure, not the job itself. | not yet (1 fixture) |
@@ -63,7 +66,20 @@ know" beats a confidently wrong diagnosis.
 
 ## Accuracy
 
-Per-class precision, recall, and UNCLASSIFIED rate are measured against the committed fixture corpus. Current numbers: not yet measured (fixture corpus lands in P2, measurement in P3). Corpus status as of P2: 12 real, redacted, hand-labeled fixtures; per-class counts and sourcing notes in `docs/LABELING.md`.
+Per-class precision, recall, and the UNCLASSIFIED rate are measured against
+the committed fixture corpus and reported, with the exact numbers, in
+`docs/ACCURACY.md` (regenerate with `make measure`). Corpus status: 12 real,
+redacted, hand-labeled fixtures; per-class counts and sourcing notes in
+`docs/LABELING.md`.
+
+Labels were assigned by a single labeler (the maintainer, against criteria
+committed before any label was assigned) — there is no independent second
+labeler, and `docs/ACCURACY.md` says so plainly rather than implying a
+consensus ground truth that does not exist. If you think a specific fixture
+in the corpus is mislabeled, or `why-red` got a run of yours wrong, the
+[misclassification issue template](https://github.com/fadhilfathi/why-red/issues/new?template=misclassification.yml)
+is exactly for that — external disagreement is the only independent check a
+solo project has, and it is wanted.
 
 ## Optional AI layer
 

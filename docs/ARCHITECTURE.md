@@ -107,19 +107,34 @@ so there is no exact source (see API_NOTES.md).
 ### 3. Classify (`classify/engine.py`, `classify/rules/`)
 
 Input: raw log lines of the located job (all of them, not just the step;
-the step boundary is derived from the `##[group]`/timestamp markers and
-passed as a hint). Output: `Classification`.
+`Location.line_range`, when known, is passed as a tie-break hint, not a
+search boundary). Output: `Classification`.
 
-- Rules are data: `(rule_id, FailureClass, compiled regex list, confidence,
-  next_checks)`. A rule fires on a line; the line becomes `Evidence`.
-- The engine evaluates all rules, collects hits, and picks the class with the
-  highest confidence. Ties are broken by the rule that fired closest to the
-  end of the failing step's region (the last error is usually the real one,
-  earlier ones are often warnings).
-- No hit: `UNCLASSIFIED`, confidence 0.0, empty evidence. The extract stage
-  still produces a best-candidate excerpt (see below).
-- Confidence is a fixed number per rule, decided when the rule is written and
-  documented next to it. It is not learned and not tuned against the corpus.
+- Rules are data (`classify/rules/Rule`): `rule_id`, `FailureClass`, a
+  compiled regex, a fixed `confidence`, and `next_checks`. A rule fires on a
+  line; every matching line becomes `Evidence` (not just the first).
+- A rule only exists for a class with >=2 real fixtures in the corpus
+  (`SHIPPED_CLASSES`, derived from `RULES` itself, never hand-maintained).
+  A class below that bar has no rule and can only ever come back
+  UNCLASSIFIED — this is enforced by construction, not by a check someone
+  could forget. As of P3: TEST_FAILURE, LINT_FAILURE, NETWORK_FAILURE.
+- Matching happens against each line with ANSI codes AND the GitHub
+  timestamp stripped (`classify/engine.py`'s `match_lines`) -- every real
+  line starts with a timestamp, so an anchored pattern like pytest's own
+  `^FAILED ...` never matches the raw line. `Evidence.text` itself keeps
+  only ANSI stripped, per the schema's contract; timestamp stripping for
+  *display* is extract's job in P4. This was a real P3 bug (measure.py
+  showed 0.00 recall for two classes before the fix; see docs/ACCURACY.md's
+  history in git log).
+- The engine evaluates all rules, collects every hit, and picks the class
+  with the highest confidence. A confidence tie is broken by the evidence
+  line closest to the end of the failing step's region when one is known
+  (the last error is usually the real one).
+- No hit: `UNCLASSIFIED`, confidence 0.0, empty evidence, `rule_id` is
+  `None`. The extract stage still produces a best-candidate excerpt (P4).
+- Confidence is a fixed number per rule, decided when the rule is written
+  and documented next to it. It is not learned and not tuned against the
+  corpus. `docs/ACCURACY.md`'s numbers are the check that it wasn't.
 - Rules must not be tuned against fixtures that were already used for
   measurement. New rules need new fixtures first (see CONTRIBUTING.md).
 
