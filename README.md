@@ -36,28 +36,34 @@ Read-only: never comments, reruns, or cancels.
 
 ## Failure classes
 
-| Class | Meaning |
-|---|---|
-| DEPENDENCY_RESOLUTION | Package manager could not resolve or install dependencies. |
-| COMPILATION_ERROR | Source failed to compile or build. |
-| TEST_FAILURE | A test assertion failed. |
-| FLAKY_TEST | Test failed but shows signs of non-determinism (retry/pass pattern). |
-| OOM_KILLED | Process was killed for exceeding memory limits. |
-| TIMEOUT | A step or job exceeded its time limit. |
-| DISK_FULL | Runner ran out of disk space. |
-| AUTH_FAILURE | Authentication or authorization to a service failed. |
-| RATE_LIMITED | A request was rejected for exceeding a rate limit. |
-| NETWORK_FAILURE | A network request failed (DNS, connection reset, unreachable). |
-| CACHE_MISS | A required cache was missing or invalid. |
-| LINT_FAILURE | A linter or formatter check failed. |
-| MISSING_SECRET | A required secret or environment variable was absent. |
-| CONFIG_ERROR | Workflow or tool configuration was invalid. |
-| INFRASTRUCTURE | Failure originated in GitHub's infrastructure, not the job itself. |
-| UNCLASSIFIED | An honest answer: no rule matched. Shown with the best candidate excerpt. |
+Ships in P3 means the class has at least 2 real, hand-labeled fixtures in the
+committed corpus (the minimum to avoid tuning a rule to a single example — see
+`docs/LABELING.md`). A class below that bar is still recognised here, but
+`why-red` reports `UNCLASSIFIED` for it rather than guess: an honest "I don't
+know" beats a confidently wrong diagnosis.
+
+| Class | Meaning | Ships in P3? |
+|---|---|---|
+| DEPENDENCY_RESOLUTION | Package manager could not resolve or install dependencies. | not yet (1 fixture) |
+| COMPILATION_ERROR | Source failed to compile or build. | not yet (1 fixture) |
+| TEST_FAILURE | A test assertion failed. | yes |
+| FLAKY_TEST | Test failed but shows signs of non-determinism (retry/pass pattern). | not yet (0 fixtures — needs direct in-log retry evidence, which is rare in public logs) |
+| OOM_KILLED | Process was killed for exceeding memory limits. | not yet (0 fixtures — GitHub-hosted runners have generous default memory) |
+| TIMEOUT | A step or job exceeded its time limit. | not yet (1 fixture) |
+| DISK_FULL | Runner ran out of disk space. | not yet (0 fixtures — hosted runners have generous default disk) |
+| AUTH_FAILURE | Authentication or authorization to a service failed. | not yet (0 fixtures — every public candidate found so far was a false positive on the class signature, not a real failure caused by rejected credentials) |
+| RATE_LIMITED | A request was rejected for exceeding a rate limit. | not yet (0 fixtures — same reason as AUTH_FAILURE) |
+| NETWORK_FAILURE | A network request failed (DNS, connection reset, unreachable). | yes |
+| CACHE_MISS | A required cache was missing or invalid. | not yet (0 fixtures — cache misses are common in logs but a later failure clearly *caused by* one is not) |
+| LINT_FAILURE | A linter or formatter check failed. | yes |
+| MISSING_SECRET | A required secret or environment variable was absent. | not yet (1 fixture — this one fails loudly when it happens; it is finding a second public example, not the class itself, that is slow) |
+| CONFIG_ERROR | Workflow or tool configuration was invalid. | not yet (1 fixture) |
+| INFRASTRUCTURE | Failure originated in GitHub's infrastructure, not the job itself. | not yet (1 fixture) |
+| UNCLASSIFIED | An honest answer: no rule matched. Shown with the best candidate excerpt. | always the fallback |
 
 ## Accuracy
 
-Per-class precision, recall, and UNCLASSIFIED rate are measured against the committed fixture corpus. Current numbers: not yet measured (fixture corpus lands in P2, measurement in P3).
+Per-class precision, recall, and UNCLASSIFIED rate are measured against the committed fixture corpus. Current numbers: not yet measured (fixture corpus lands in P2, measurement in P3). Corpus status as of P2: 12 real, redacted, hand-labeled fixtures; per-class counts and sourcing notes in `docs/LABELING.md`.
 
 ## Optional AI layer
 

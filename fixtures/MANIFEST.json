@@ -1,4 +1,70 @@
 {
+  "deno-compile-error": {
+    "harvested_at": "2026-09-17T12:26:22Z",
+    "head_sha": "7e8727ecb13cacf2090e26c902adc65057f4ebed",
+    "jobs": [
+      104762914616
+    ],
+    "repo": "denoland/deno",
+    "run_attempt": 1,
+    "run_id": 35086627955,
+    "url": "https://github.com/denoland/deno/actions/runs/35086627955"
+  },
+  "deno-runner-shutdown-during-tests": {
+    "harvested_at": "2026-09-17T12:26:32Z",
+    "head_sha": "685eb3b4b4ffaf2770480b8a99021e8b03292786",
+    "jobs": [
+      105161301519
+    ],
+    "repo": "denoland/deno",
+    "run_attempt": 1,
+    "run_id": 35208884873,
+    "url": "https://github.com/denoland/deno/actions/runs/35208884873"
+  },
+  "elasticsearch-missing-github-token": {
+    "harvested_at": "2026-09-17T12:46:25Z",
+    "head_sha": "9cb20ba303ec0dab95a9baaf28dcc0f5992347a5",
+    "jobs": [
+      100393620948
+    ],
+    "repo": "elastic/elasticsearch",
+    "run_attempt": 1,
+    "run_id": 33673826648,
+    "url": "https://github.com/elastic/elasticsearch/actions/runs/33673826648"
+  },
+  "elasticsearch-updatecli-yaml-config-error": {
+    "harvested_at": "2026-09-17T12:46:34Z",
+    "head_sha": "885340b408de4e2c40ad449feb9e26db57727597",
+    "jobs": [
+      91667911941
+    ],
+    "repo": "elastic/elasticsearch",
+    "run_attempt": 1,
+    "run_id": 30808003091,
+    "url": "https://github.com/elastic/elasticsearch/actions/runs/30808003091"
+  },
+  "moby-test-timeout": {
+    "harvested_at": "2026-09-17T12:17:26Z",
+    "head_sha": "083b92fae4ccfd3b56fd11d77179e756dba2c7b0",
+    "jobs": [
+      105036634710
+    ],
+    "repo": "moby/moby",
+    "run_attempt": 1,
+    "run_id": 35168265434,
+    "url": "https://github.com/moby/moby/actions/runs/35168265434"
+  },
+  "moby-vendoring-mismatch": {
+    "harvested_at": "2026-09-17T12:17:32Z",
+    "head_sha": "8ee3360195bcbd01da16b0ff2d1e501deae3e3c9",
+    "jobs": [
+      105009844801
+    ],
+    "repo": "moby/moby",
+    "run_attempt": 1,
+    "run_id": 35160471879,
+    "url": "https://github.com/moby/moby/actions/runs/35160471879"
+  },
   "pytest-test-failure-matrix": {
     "harvested_at": "2026-09-16T14:29:05Z",
     "head_sha": "de5d6be4171266f7fa48d1e25b0c5f2269634e5b",
@@ -9,5 +75,60 @@
     "run_attempt": 1,
     "run_id": 34964800998,
     "url": "https://github.com/pytest-dev/pytest/actions/runs/34964800998"
+  },
+  "spring-boot-network-failure": {
+    "harvested_at": "2026-09-17T12:16:51Z",
+    "head_sha": "3d731beaa1e94ea80f5f284c7c8c53d713bbc118",
+    "jobs": [
+      101015071945
+    ],
+    "repo": "spring-projects/spring-boot",
+    "run_attempt": 1,
+    "run_id": 33870500493,
+    "url": "https://github.com/spring-projects/spring-boot/actions/runs/33870500493"
+  },
+  "spring-boot-network-failure-2": {
+    "harvested_at": "2026-09-17T12:17:52Z",
+    "head_sha": "e2bcbdf0afd51159341b181cc085f76b551fea1c",
+    "jobs": [
+      100963655856
+    ],
+    "repo": "spring-projects/spring-boot",
+    "run_attempt": 1,
+    "run_id": 33854218763,
+    "url": "https://github.com/spring-projects/spring-boot/actions/runs/33854218763"
+  },
+  "strands-evals-small-repo-test-failure": {
+    "harvested_at": "2026-09-17T12:37:10Z",
+    "head_sha": "dbbbd53794f2cc0c38a25722bcf0a55116bc4509",
+    "jobs": [
+      95882116563
+    ],
+    "repo": "strands-agents/evals",
+    "run_attempt": 1,
+    "run_id": 32188190276,
+    "url": "https://github.com/strands-agents/evals/actions/runs/32188190276"
+  },
+  "vite-eslint-failure": {
+    "harvested_at": "2026-09-17T05:52:55Z",
+    "head_sha": "701a78cd84173927cf02bfc1172f62cb0e63168e",
+    "jobs": [
+      100719856234
+    ],
+    "repo": "vitejs/vite",
+    "run_attempt": 1,
+    "run_id": 33776637456,
+    "url": "https://github.com/vitejs/vite/actions/runs/33776637456"
+  },
+  "vite-eslint-failure-2": {
+    "harvested_at": "2026-09-17T05:53:00Z",
+    "head_sha": "5c2c04d1c1d4863d7405591bf10afc15f0082256",
+    "jobs": [
+      100572378803
+    ],
+    "repo": "vitejs/vite",
+    "run_attempt": 1,
+    "run_id": 33731541662,
+    "url": "https://github.com/vitejs/vite/actions/runs/33731541662"
   }
 }

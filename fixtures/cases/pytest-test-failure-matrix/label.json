@@ -1,0 +1,7 @@
+{
+  "failure_class": "TEST_FAILURE",
+  "evidence_lines": [927, 940],
+  "job_id": 104401099719,
+  "notes": "pytest reports FAILED testing/test_skipping.py::test_skipped_folding with an assertion-style nomatch diff, then the summary line '1 failed, 4496 passed, ...'. No retry evidence anywhere in the log, so not FLAKY_TEST.",
+  "ambiguous_with": null
+}

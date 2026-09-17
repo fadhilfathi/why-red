@@ -119,9 +119,81 @@ create, decided now so no label encodes an in-the-moment guess.
    Why: a cache miss is the normal, common case and must not become the
    default explanation for every failure that follows one in the log.
 
+6. **Runner shutdown after real test failures in the same step region.**
+   (Found labeling `deno-runner-shutdown-during-tests`.) A step's log shows
+   genuine `FAILED` test lines, then minutes later an explicit runner
+   shutdown message (`The runner has received a shutdown signal...`) and the
+   step exits on a signal (128+N, e.g. 143 for SIGTERM) rather than the
+   test runner's own exit code.
+   **Winner: `INFRASTRUCTURE`.**
+   Why: the step's actual exit is attributed to the signal, not to the test
+   runner completing and reporting failure — the test run never finished.
+   The earlier `FAILED` lines are real but were not what ended the step;
+   telling a developer "test failure" would send them to chase tests that
+   may well have kept running had the runner survived. The explicit
+   shutdown message is more specific evidence than a bare non-zero exit,
+   so it wins per the `INFRASTRUCTURE` criteria's own "never inferred from
+   silence" rule read the other way: here it is not silence, it is stated.
+   `ambiguous_with: "TEST_FAILURE"` in the label.
+
 Any overlap not listed here that comes up during labeling gets added to this
 section, with the same reasoning-then-decision shape, before the fixture
 that raised it is labeled — not after.
+
+## Per-class fixture count (P2, as of 2026-09-17)
+
+12 real, redacted, hand-labeled fixtures. Two is the minimum to ship in P3,
+not a comfortable number — rows at exactly 2 are flagged. Rows at 0 or 1 ship
+as `UNCLASSIFIED` in P3, with the sourcing difficulty stated in the README.
+
+| Class | Fixtures | Ships in P3? |
+|---|---|---|
+| TEST_FAILURE | 2 (min) | yes |
+| LINT_FAILURE | 2 (min) | yes |
+| NETWORK_FAILURE | 2 (min) | yes |
+| DEPENDENCY_RESOLUTION | 1 | no — one short |
+| COMPILATION_ERROR | 1 | no — one short |
+| TIMEOUT | 1 | no — one short |
+| MISSING_SECRET | 1 | no — one short |
+| CONFIG_ERROR | 1 | no — one short |
+| INFRASTRUCTURE | 1 | no — one short |
+| FLAKY_TEST | 0 | no |
+| OOM_KILLED | 0 | no |
+| DISK_FULL | 0 | no |
+| AUTH_FAILURE | 0 | no |
+| RATE_LIMITED | 0 | no |
+| CACHE_MISS | 0 | no |
+
+Corpus is 12 of the 25-fixture target, 3 of 15 classes at the 2-fixture ship
+minimum. Growing it is ongoing work per the roadmap, not a P2 gate; P3 ships
+classification for the 3 rows above the line and reports the other 12 as
+`UNCLASSIFIED` honestly, which is the outcome this document was written to
+make acceptable rather than something to paper over.
+
+Why each 0-count class was hard to source publicly in this pass:
+
+- `AUTH_FAILURE` / `RATE_LIMITED`: every "401"/"403"/"429"-shaped hit found
+  during harvesting was a false positive — text inside a bot's event payload,
+  a `retry-exempt-status-codes` config value, or a warning that resolved
+  itself mid-build (see `moby-vendoring-mismatch`'s label, which explains
+  rejecting an early rate-limit warning as the root cause). A real, harvested
+  case where a rejected request is the actual, sole reason the step failed
+  did not turn up in this pass.
+- `OOM_KILLED` / `DISK_FULL`: GitHub-hosted runners have generous default
+  memory and disk; both are more common on self-hosted runners or resource-
+  constrained matrix legs, neither of which this pass's repo list happened
+  to hit.
+- `FLAKY_TEST`: needs direct in-log evidence of a retry (a rerun plugin, or
+  the same test both failing and passing within one run/attempt). A run with
+  `run_attempt > 1` was found (a human clicked "re-run failed jobs"), but per
+  its own second attempt also failing, or the retry's outcome differing
+  between attempts, was not confirmed for any candidate in this pass —
+  and per the criteria, guessing flakiness from a failure that merely looks
+  timing-sensitive is exactly the invented cause the tool must not produce.
+- `CACHE_MISS`: cache-miss log lines are common, but a later failure with an
+  explicit causal link to that specific miss (tie-break #5) was not found;
+  every candidate's real failure traced to something else, as with
+  `moby-vendoring-mismatch`.
 
 ## Fixture selection priorities (this phase)
 
