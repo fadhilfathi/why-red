@@ -1,4 +1,4 @@
-.PHONY: sync lint fmt fmt-check type test gate build clean
+.PHONY: sync lint fmt fmt-check type test gate build clean measure
 
 sync:
 	uv sync --all-groups
@@ -20,6 +20,9 @@ test:
 	uv run pytest --cov=why_red --cov-report=term-missing
 
 gate: lint fmt-check type test
+
+measure:
+	uv run python fixtures/measure.py
 
 build:
 	uv build

@@ -5,6 +5,7 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from pathlib import Path
 
+from why_red.classify.engine import classify
 from why_red.fetch.cache import RunCache
 from why_red.fetch.github import (
     LogUnavailableError,
@@ -14,6 +15,7 @@ from why_red.fetch.github import (
     fetch_run_payload,
 )
 from why_red.locate import failed_jobs, locate, step_line_range
+from why_red.models.failure import Classification, FailureClass
 from why_red.models.run import Location, Run
 
 
@@ -72,3 +74,14 @@ def locate_in(loaded: Loaded) -> Location | None:
         return loc
     span = step_line_range(text.split("\n"), step)
     return loc.model_copy(update={"line_range": span})
+
+
+def classify_in(loaded: Loaded, location: Location | None) -> Classification:
+    """UNCLASSIFIED, honestly, when there is no location or no log to read --
+    never a guess made without evidence in hand."""
+    if location is None:
+        return Classification(failure_class=FailureClass.UNCLASSIFIED, confidence=0.0)
+    text = loaded.logs.get(location.job_id)
+    if text is None:
+        return Classification(failure_class=FailureClass.UNCLASSIFIED, confidence=0.0)
+    return classify(text, location)

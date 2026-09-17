@@ -11,7 +11,7 @@ import typer
 from why_red import __version__
 from why_red.fetch.cache import default_cache_dir
 from why_red.fetch.github import GhError
-from why_red.pipeline import Loaded, load_dir, load_run, locate_in
+from why_red.pipeline import Loaded, classify_in, load_dir, load_run, locate_in
 
 app = typer.Typer(add_completion=False, rich_markup_mode=None)
 
@@ -71,10 +71,10 @@ def main(
         except GhError as exc:
             typer.echo(f"error: {exc}", err=True)
             raise typer.Exit(1) from exc
-    _print_location(loaded)
+    _print_report(loaded)
 
 
-def _print_location(loaded: Loaded) -> None:
+def _print_report(loaded: Loaded) -> None:
     run = loaded.run
     typer.echo(f"run {run.id} {run.repo} {run.workflow_name!r} {run.status}/{run.conclusion.value}")
     loc = locate_in(loaded)
@@ -88,5 +88,13 @@ def _print_location(loaded: Loaded) -> None:
         typer.echo(f"also failed: steps {loc.other_failed_steps}")
     if loc.line_range:
         typer.echo(f"log lines {loc.line_range[0]}-{loc.line_range[1]}")
+
+    result = classify_in(loaded, loc)
+    typer.echo(f"class {result.failure_class.value} (confidence {result.confidence:.2f})")
+    for ev in result.evidence:
+        typer.echo(f"  L{ev.line_no}: {ev.text}")
+    for check in result.next_checks:
+        typer.echo(f"next: {check}")
+
     for err in loaded.log_errors.values():
         typer.echo(f"warning: {err}", err=True)
