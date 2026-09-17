@@ -1,0 +1,7 @@
+# Verified false positives only, each with the reason inline. Never add an entry
+# without reading the flagged line first (see CONTRIBUTING.md).
+
+# buildkit snapshotter internal key ID ("key=qfdlg1g9dj8zy1vufy209pwr0"), not a
+# credential -- confirmed by reading the surrounding debug log line, which is a
+# "remove snapshot" trace message.
+fixtures/cases/moby-vendoring-mismatch/105009844801.log:generic-api-key:3111

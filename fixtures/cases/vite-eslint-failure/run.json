@@ -1,0 +1,1179 @@
+{
+  "id": 33776637456,
+  "repo": "vitejs/vite",
+  "workflow_name": "CI",
+  "run_number": 31539,
+  "run_attempt": 1,
+  "event": "pull_request",
+  "head_branch": "renovate/major-eslint-monorepo",
+  "head_sha": "701a78cd84173927cf02bfc1172f62cb0e63168e",
+  "status": "completed",
+  "conclusion": "failure",
+  "created_at": "2026-09-03T16:06:31Z",
+  "updated_at": "2026-09-03T16:14:05Z",
+  "html_url": "https://github.com/vitejs/vite/actions/runs/33776637456",
+  "jobs": [
+    {
+      "id": 100719856234,
+      "name": "Lint: node-24, ubuntu-latest",
+      "status": "completed",
+      "conclusion": "failure",
+      "started_at": "2026-09-03T16:06:35Z",
+      "completed_at": "2026-09-03T16:07:28Z",
+      "runner_name": "GitHub Actions 1000452050",
+      "html_url": "https://github.com/vitejs/vite/actions/runs/33776637456/job/100719856234",
+      "steps": [
+        {
+          "number": 1,
+          "name": "Set up job",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:06:36Z",
+          "completed_at": "2026-09-03T16:06:37Z"
+        },
+        {
+          "number": 2,
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:06:37Z",
+          "completed_at": "2026-09-03T16:06:39Z"
+        },
+        {
+          "number": 3,
+          "name": "Install pnpm",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:06:39Z",
+          "completed_at": "2026-09-03T16:06:45Z"
+        },
+        {
+          "number": 4,
+          "name": "Set node version to 24",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:06:45Z",
+          "completed_at": "2026-09-03T16:06:52Z"
+        },
+        {
+          "number": 5,
+          "name": "Install deps",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:06:52Z",
+          "completed_at": "2026-09-03T16:07:04Z"
+        },
+        {
+          "number": 6,
+          "name": "Build",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:04Z",
+          "completed_at": "2026-09-03T16:07:13Z"
+        },
+        {
+          "number": 7,
+          "name": "Lint",
+          "conclusion": "failure",
+          "started_at": "2026-09-03T16:07:13Z",
+          "completed_at": "2026-09-03T16:07:26Z"
+        },
+        {
+          "number": 8,
+          "name": "Check formatting",
+          "conclusion": "skipped",
+          "started_at": "2026-09-03T16:07:26Z",
+          "completed_at": "2026-09-03T16:07:26Z"
+        },
+        {
+          "number": 9,
+          "name": "Typecheck",
+          "conclusion": "skipped",
+          "started_at": "2026-09-03T16:07:26Z",
+          "completed_at": "2026-09-03T16:07:26Z"
+        },
+        {
+          "number": 10,
+          "name": "Test docs",
+          "conclusion": "skipped",
+          "started_at": "2026-09-03T16:07:26Z",
+          "completed_at": "2026-09-03T16:07:26Z"
+        },
+        {
+          "number": 18,
+          "name": "Post Set node version to 24",
+          "conclusion": "skipped",
+          "started_at": "2026-09-03T16:07:26Z",
+          "completed_at": "2026-09-03T16:07:26Z"
+        },
+        {
+          "number": 19,
+          "name": "Post Install pnpm",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:26Z",
+          "completed_at": "2026-09-03T16:07:26Z"
+        },
+        {
+          "number": 20,
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:26Z",
+          "completed_at": "2026-09-03T16:07:26Z"
+        },
+        {
+          "number": 21,
+          "name": "Complete job",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:26Z",
+          "completed_at": "2026-09-03T16:07:26Z"
+        }
+      ]
+    },
+    {
+      "id": 100719856575,
+      "name": "Get changed files",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-09-03T16:06:45Z",
+      "completed_at": "2026-09-03T16:06:55Z",
+      "runner_name": "GitHub Actions 1000452051",
+      "html_url": "https://github.com/vitejs/vite/actions/runs/33776637456/job/100719856575",
+      "steps": [
+        {
+          "number": 1,
+          "name": "Set up job",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:06:47Z",
+          "completed_at": "2026-09-03T16:06:49Z"
+        },
+        {
+          "number": 2,
+          "name": "Checkout",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:06:49Z",
+          "completed_at": "2026-09-03T16:06:53Z"
+        },
+        {
+          "number": 3,
+          "name": "Get changed files",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:06:53Z",
+          "completed_at": "2026-09-03T16:06:54Z"
+        },
+        {
+          "number": 6,
+          "name": "Post Checkout",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:06:54Z",
+          "completed_at": "2026-09-03T16:06:54Z"
+        },
+        {
+          "number": 7,
+          "name": "Complete job",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:06:54Z",
+          "completed_at": "2026-09-03T16:06:54Z"
+        }
+      ]
+    },
+    {
+      "id": 100719988101,
+      "name": "Build&Test: node-24, macos-latest",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-09-03T16:07:06Z",
+      "completed_at": "2026-09-03T16:13:45Z",
+      "runner_name": "GitHub Actions 1000452060",
+      "html_url": "https://github.com/vitejs/vite/actions/runs/33776637456/job/100719988101",
+      "steps": [
+        {
+          "number": 1,
+          "name": "Set up job",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:07Z",
+          "completed_at": "2026-09-03T16:07:09Z"
+        },
+        {
+          "number": 2,
+          "name": "Checkout",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:09Z",
+          "completed_at": "2026-09-03T16:07:12Z"
+        },
+        {
+          "number": 3,
+          "name": "Install pnpm",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:12Z",
+          "completed_at": "2026-09-03T16:07:21Z"
+        },
+        {
+          "number": 4,
+          "name": "Set node version to 24",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:21Z",
+          "completed_at": "2026-09-03T16:07:50Z"
+        },
+        {
+          "number": 5,
+          "name": "Set node version to 24 for builds",
+          "conclusion": "skipped",
+          "started_at": "2026-09-03T16:07:50Z",
+          "completed_at": "2026-09-03T16:07:50Z"
+        },
+        {
+          "number": 6,
+          "name": "Install deps",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:50Z",
+          "completed_at": "2026-09-03T16:08:05Z"
+        },
+        {
+          "number": 7,
+          "name": "(non-windows) Set Playwright path and Get playwright version",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:08:05Z",
+          "completed_at": "2026-09-03T16:08:06Z"
+        },
+        {
+          "number": 8,
+          "name": "(windows) Set Playwright path and Get playwright version",
+          "conclusion": "skipped",
+          "started_at": "2026-09-03T16:08:06Z",
+          "completed_at": "2026-09-03T16:08:06Z"
+        },
+        {
+          "number": 9,
+          "name": "Cache Playwright's binary",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:08:06Z",
+          "completed_at": "2026-09-03T16:08:14Z"
+        },
+        {
+          "number": 10,
+          "name": "Install Playwright",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:08:14Z",
+          "completed_at": "2026-09-03T16:08:15Z"
+        },
+        {
+          "number": 11,
+          "name": "Build",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:08:15Z",
+          "completed_at": "2026-09-03T16:08:26Z"
+        },
+        {
+          "number": 12,
+          "name": "Set node version to 24",
+          "conclusion": "skipped",
+          "started_at": "2026-09-03T16:08:26Z",
+          "completed_at": "2026-09-03T16:08:26Z"
+        },
+        {
+          "number": 13,
+          "name": "Test unit",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:08:26Z",
+          "completed_at": "2026-09-03T16:08:36Z"
+        },
+        {
+          "number": 14,
+          "name": "Test serve",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:08:36Z",
+          "completed_at": "2026-09-03T16:10:35Z"
+        },
+        {
+          "number": 15,
+          "name": "Test serve (bundled dev)",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:10:35Z",
+          "completed_at": "2026-09-03T16:12:06Z"
+        },
+        {
+          "number": 16,
+          "name": "Test build",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:12:06Z",
+          "completed_at": "2026-09-03T16:13:38Z"
+        },
+        {
+          "number": 29,
+          "name": "Post Cache Playwright's binary",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:13:38Z",
+          "completed_at": "2026-09-03T16:13:38Z"
+        },
+        {
+          "number": 30,
+          "name": "Post Set node version to 24",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:13:38Z",
+          "completed_at": "2026-09-03T16:13:39Z"
+        },
+        {
+          "number": 31,
+          "name": "Post Install pnpm",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:13:39Z",
+          "completed_at": "2026-09-03T16:13:39Z"
+        },
+        {
+          "number": 32,
+          "name": "Post Checkout",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:13:39Z",
+          "completed_at": "2026-09-03T16:13:40Z"
+        },
+        {
+          "number": 33,
+          "name": "Complete job",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:13:40Z",
+          "completed_at": "2026-09-03T16:13:43Z"
+        }
+      ]
+    },
+    {
+      "id": 100719988272,
+      "name": "Build&Test: node-22, ubuntu-latest",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-09-03T16:06:59Z",
+      "completed_at": "2026-09-03T16:10:55Z",
+      "runner_name": "GitHub Actions 1000452059",
+      "html_url": "https://github.com/vitejs/vite/actions/runs/33776637456/job/100719988272",
+      "steps": [
+        {
+          "number": 1,
+          "name": "Set up job",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:00Z",
+          "completed_at": "2026-09-03T16:07:02Z"
+        },
+        {
+          "number": 2,
+          "name": "Checkout",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:02Z",
+          "completed_at": "2026-09-03T16:07:04Z"
+        },
+        {
+          "number": 3,
+          "name": "Install pnpm",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:04Z",
+          "completed_at": "2026-09-03T16:07:10Z"
+        },
+        {
+          "number": 4,
+          "name": "Set node version to 22",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:10Z",
+          "completed_at": "2026-09-03T16:07:15Z"
+        },
+        {
+          "number": 5,
+          "name": "Set node version to 24 for builds",
+          "conclusion": "skipped",
+          "started_at": "2026-09-03T16:07:15Z",
+          "completed_at": "2026-09-03T16:07:15Z"
+        },
+        {
+          "number": 6,
+          "name": "Install deps",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:15Z",
+          "completed_at": "2026-09-03T16:07:26Z"
+        },
+        {
+          "number": 7,
+          "name": "(non-windows) Set Playwright path and Get playwright version",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:26Z",
+          "completed_at": "2026-09-03T16:07:27Z"
+        },
+        {
+          "number": 8,
+          "name": "(windows) Set Playwright path and Get playwright version",
+          "conclusion": "skipped",
+          "started_at": "2026-09-03T16:07:27Z",
+          "completed_at": "2026-09-03T16:07:27Z"
+        },
+        {
+          "number": 9,
+          "name": "Cache Playwright's binary",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:27Z",
+          "completed_at": "2026-09-03T16:07:31Z"
+        },
+        {
+          "number": 10,
+          "name": "Install Playwright",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:31Z",
+          "completed_at": "2026-09-03T16:07:33Z"
+        },
+        {
+          "number": 11,
+          "name": "Build",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:33Z",
+          "completed_at": "2026-09-03T16:07:42Z"
+        },
+        {
+          "number": 12,
+          "name": "Set node version to 22",
+          "conclusion": "skipped",
+          "started_at": "2026-09-03T16:07:42Z",
+          "completed_at": "2026-09-03T16:07:42Z"
+        },
+        {
+          "number": 13,
+          "name": "Test unit",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:42Z",
+          "completed_at": "2026-09-03T16:07:49Z"
+        },
+        {
+          "number": 14,
+          "name": "Test serve",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:49Z",
+          "completed_at": "2026-09-03T16:09:01Z"
+        },
+        {
+          "number": 15,
+          "name": "Test serve (bundled dev)",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:09:01Z",
+          "completed_at": "2026-09-03T16:09:53Z"
+        },
+        {
+          "number": 16,
+          "name": "Test build",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:09:53Z",
+          "completed_at": "2026-09-03T16:10:51Z"
+        },
+        {
+          "number": 29,
+          "name": "Post Cache Playwright's binary",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:10:51Z",
+          "completed_at": "2026-09-03T16:10:51Z"
+        },
+        {
+          "number": 30,
+          "name": "Post Set node version to 22",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:10:51Z",
+          "completed_at": "2026-09-03T16:10:51Z"
+        },
+        {
+          "number": 31,
+          "name": "Post Install pnpm",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:10:51Z",
+          "completed_at": "2026-09-03T16:10:51Z"
+        },
+        {
+          "number": 32,
+          "name": "Post Checkout",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:10:51Z",
+          "completed_at": "2026-09-03T16:10:52Z"
+        },
+        {
+          "number": 33,
+          "name": "Complete job",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:10:52Z",
+          "completed_at": "2026-09-03T16:10:52Z"
+        }
+      ]
+    },
+    {
+      "id": 100719988341,
+      "name": "Build&Test: node-24.15.0, windows-latest",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-09-03T16:06:58Z",
+      "completed_at": "2026-09-03T16:13:13Z",
+      "runner_name": "GitHub Actions 1000452061",
+      "html_url": "https://github.com/vitejs/vite/actions/runs/33776637456/job/100719988341",
+      "steps": [
+        {
+          "number": 1,
+          "name": "Set up job",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:06:59Z",
+          "completed_at": "2026-09-03T16:07:00Z"
+        },
+        {
+          "number": 2,
+          "name": "Checkout",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:00Z",
+          "completed_at": "2026-09-03T16:07:09Z"
+        },
+        {
+          "number": 3,
+          "name": "Install pnpm",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:09Z",
+          "completed_at": "2026-09-03T16:07:38Z"
+        },
+        {
+          "number": 4,
+          "name": "Set node version to 24.15.0",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:38Z",
+          "completed_at": "2026-09-03T16:07:49Z"
+        },
+        {
+          "number": 5,
+          "name": "Set node version to 24 for builds",
+          "conclusion": "skipped",
+          "started_at": "2026-09-03T16:07:49Z",
+          "completed_at": "2026-09-03T16:07:49Z"
+        },
+        {
+          "number": 6,
+          "name": "Install deps",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:49Z",
+          "completed_at": "2026-09-03T16:08:11Z"
+        },
+        {
+          "number": 7,
+          "name": "(non-windows) Set Playwright path and Get playwright version",
+          "conclusion": "skipped",
+          "started_at": "2026-09-03T16:08:11Z",
+          "completed_at": "2026-09-03T16:08:11Z"
+        },
+        {
+          "number": 8,
+          "name": "(windows) Set Playwright path and Get playwright version",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:08:11Z",
+          "completed_at": "2026-09-03T16:08:12Z"
+        },
+        {
+          "number": 9,
+          "name": "Cache Playwright's binary",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:08:12Z",
+          "completed_at": "2026-09-03T16:08:16Z"
+        },
+        {
+          "number": 10,
+          "name": "Install Playwright",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:08:16Z",
+          "completed_at": "2026-09-03T16:08:17Z"
+        },
+        {
+          "number": 11,
+          "name": "Build",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:08:17Z",
+          "completed_at": "2026-09-03T16:08:28Z"
+        },
+        {
+          "number": 12,
+          "name": "Set node version to 24.15.0",
+          "conclusion": "skipped",
+          "started_at": "2026-09-03T16:08:28Z",
+          "completed_at": "2026-09-03T16:08:28Z"
+        },
+        {
+          "number": 13,
+          "name": "Test unit",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:08:28Z",
+          "completed_at": "2026-09-03T16:08:41Z"
+        },
+        {
+          "number": 14,
+          "name": "Test serve",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:08:41Z",
+          "completed_at": "2026-09-03T16:10:23Z"
+        },
+        {
+          "number": 15,
+          "name": "Test serve (bundled dev)",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:10:23Z",
+          "completed_at": "2026-09-03T16:11:35Z"
+        },
+        {
+          "number": 16,
+          "name": "Test build",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:11:35Z",
+          "completed_at": "2026-09-03T16:13:01Z"
+        },
+        {
+          "number": 29,
+          "name": "Post Cache Playwright's binary",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:13:01Z",
+          "completed_at": "2026-09-03T16:13:01Z"
+        },
+        {
+          "number": 30,
+          "name": "Post Set node version to 24.15.0",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:13:01Z",
+          "completed_at": "2026-09-03T16:13:09Z"
+        },
+        {
+          "number": 31,
+          "name": "Post Install pnpm",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:13:09Z",
+          "completed_at": "2026-09-03T16:13:09Z"
+        },
+        {
+          "number": 32,
+          "name": "Post Checkout",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:13:09Z",
+          "completed_at": "2026-09-03T16:13:12Z"
+        },
+        {
+          "number": 33,
+          "name": "Complete job",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:13:12Z",
+          "completed_at": "2026-09-03T16:13:12Z"
+        }
+      ]
+    },
+    {
+      "id": 100719988359,
+      "name": "Build&Test: node-26, ubuntu-latest",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-09-03T16:07:00Z",
+      "completed_at": "2026-09-03T16:11:19Z",
+      "runner_name": "GitHub Actions 1000452058",
+      "html_url": "https://github.com/vitejs/vite/actions/runs/33776637456/job/100719988359",
+      "steps": [
+        {
+          "number": 1,
+          "name": "Set up job",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:01Z",
+          "completed_at": "2026-09-03T16:07:03Z"
+        },
+        {
+          "number": 2,
+          "name": "Checkout",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:03Z",
+          "completed_at": "2026-09-03T16:07:05Z"
+        },
+        {
+          "number": 3,
+          "name": "Install pnpm",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:05Z",
+          "completed_at": "2026-09-03T16:07:11Z"
+        },
+        {
+          "number": 4,
+          "name": "Set node version to 26",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:11Z",
+          "completed_at": "2026-09-03T16:07:21Z"
+        },
+        {
+          "number": 5,
+          "name": "Set node version to 24 for builds",
+          "conclusion": "skipped",
+          "started_at": "2026-09-03T16:07:21Z",
+          "completed_at": "2026-09-03T16:07:21Z"
+        },
+        {
+          "number": 6,
+          "name": "Install deps",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:21Z",
+          "completed_at": "2026-09-03T16:07:31Z"
+        },
+        {
+          "number": 7,
+          "name": "(non-windows) Set Playwright path and Get playwright version",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:31Z",
+          "completed_at": "2026-09-03T16:07:32Z"
+        },
+        {
+          "number": 8,
+          "name": "(windows) Set Playwright path and Get playwright version",
+          "conclusion": "skipped",
+          "started_at": "2026-09-03T16:07:32Z",
+          "completed_at": "2026-09-03T16:07:32Z"
+        },
+        {
+          "number": 9,
+          "name": "Cache Playwright's binary",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:32Z",
+          "completed_at": "2026-09-03T16:07:36Z"
+        },
+        {
+          "number": 10,
+          "name": "Install Playwright",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:36Z",
+          "completed_at": "2026-09-03T16:07:37Z"
+        },
+        {
+          "number": 11,
+          "name": "Build",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:37Z",
+          "completed_at": "2026-09-03T16:07:46Z"
+        },
+        {
+          "number": 12,
+          "name": "Set node version to 26",
+          "conclusion": "skipped",
+          "started_at": "2026-09-03T16:07:46Z",
+          "completed_at": "2026-09-03T16:07:46Z"
+        },
+        {
+          "number": 13,
+          "name": "Test unit",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:46Z",
+          "completed_at": "2026-09-03T16:07:54Z"
+        },
+        {
+          "number": 14,
+          "name": "Test serve",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:54Z",
+          "completed_at": "2026-09-03T16:09:14Z"
+        },
+        {
+          "number": 15,
+          "name": "Test serve (bundled dev)",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:09:14Z",
+          "completed_at": "2026-09-03T16:10:11Z"
+        },
+        {
+          "number": 16,
+          "name": "Test build",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:10:11Z",
+          "completed_at": "2026-09-03T16:11:15Z"
+        },
+        {
+          "number": 29,
+          "name": "Post Cache Playwright's binary",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:11:15Z",
+          "completed_at": "2026-09-03T16:11:16Z"
+        },
+        {
+          "number": 30,
+          "name": "Post Set node version to 26",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:11:16Z",
+          "completed_at": "2026-09-03T16:11:16Z"
+        },
+        {
+          "number": 31,
+          "name": "Post Install pnpm",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:11:16Z",
+          "completed_at": "2026-09-03T16:11:16Z"
+        },
+        {
+          "number": 32,
+          "name": "Post Checkout",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:11:16Z",
+          "completed_at": "2026-09-03T16:11:16Z"
+        },
+        {
+          "number": 33,
+          "name": "Complete job",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:11:16Z",
+          "completed_at": "2026-09-03T16:11:16Z"
+        }
+      ]
+    },
+    {
+      "id": 100719988431,
+      "name": "Build&Test: node-20, ubuntu-latest",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-09-03T16:07:00Z",
+      "completed_at": "2026-09-03T16:10:39Z",
+      "runner_name": "GitHub Actions 1000452062",
+      "html_url": "https://github.com/vitejs/vite/actions/runs/33776637456/job/100719988431",
+      "steps": [
+        {
+          "number": 1,
+          "name": "Set up job",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:01Z",
+          "completed_at": "2026-09-03T16:07:03Z"
+        },
+        {
+          "number": 2,
+          "name": "Checkout",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:03Z",
+          "completed_at": "2026-09-03T16:07:05Z"
+        },
+        {
+          "number": 3,
+          "name": "Install pnpm",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:05Z",
+          "completed_at": "2026-09-03T16:07:10Z"
+        },
+        {
+          "number": 4,
+          "name": "Set node version to 20",
+          "conclusion": "skipped",
+          "started_at": "2026-09-03T16:07:10Z",
+          "completed_at": "2026-09-03T16:07:10Z"
+        },
+        {
+          "number": 5,
+          "name": "Set node version to 24 for builds",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:10Z",
+          "completed_at": "2026-09-03T16:07:11Z"
+        },
+        {
+          "number": 6,
+          "name": "Install deps",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:11Z",
+          "completed_at": "2026-09-03T16:07:22Z"
+        },
+        {
+          "number": 7,
+          "name": "(non-windows) Set Playwright path and Get playwright version",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:22Z",
+          "completed_at": "2026-09-03T16:07:22Z"
+        },
+        {
+          "number": 8,
+          "name": "(windows) Set Playwright path and Get playwright version",
+          "conclusion": "skipped",
+          "started_at": "2026-09-03T16:07:22Z",
+          "completed_at": "2026-09-03T16:07:22Z"
+        },
+        {
+          "number": 9,
+          "name": "Cache Playwright's binary",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:22Z",
+          "completed_at": "2026-09-03T16:07:26Z"
+        },
+        {
+          "number": 10,
+          "name": "Install Playwright",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:26Z",
+          "completed_at": "2026-09-03T16:07:26Z"
+        },
+        {
+          "number": 11,
+          "name": "Build",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:26Z",
+          "completed_at": "2026-09-03T16:07:32Z"
+        },
+        {
+          "number": 12,
+          "name": "Set node version to 20",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:32Z",
+          "completed_at": "2026-09-03T16:07:41Z"
+        },
+        {
+          "number": 13,
+          "name": "Test unit",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:41Z",
+          "completed_at": "2026-09-03T16:07:47Z"
+        },
+        {
+          "number": 14,
+          "name": "Test serve",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:47Z",
+          "completed_at": "2026-09-03T16:08:57Z"
+        },
+        {
+          "number": 15,
+          "name": "Test serve (bundled dev)",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:08:57Z",
+          "completed_at": "2026-09-03T16:09:45Z"
+        },
+        {
+          "number": 16,
+          "name": "Test build",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:09:45Z",
+          "completed_at": "2026-09-03T16:10:36Z"
+        },
+        {
+          "number": 28,
+          "name": "Post Set node version to 20",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:10:36Z",
+          "completed_at": "2026-09-03T16:10:36Z"
+        },
+        {
+          "number": 29,
+          "name": "Post Cache Playwright's binary",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:10:36Z",
+          "completed_at": "2026-09-03T16:10:36Z"
+        },
+        {
+          "number": 30,
+          "name": "Post Set node version to 24 for builds",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:10:36Z",
+          "completed_at": "2026-09-03T16:10:36Z"
+        },
+        {
+          "number": 31,
+          "name": "Post Install pnpm",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:10:36Z",
+          "completed_at": "2026-09-03T16:10:37Z"
+        },
+        {
+          "number": 32,
+          "name": "Post Checkout",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:10:37Z",
+          "completed_at": "2026-09-03T16:10:37Z"
+        },
+        {
+          "number": 33,
+          "name": "Complete job",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:10:37Z",
+          "completed_at": "2026-09-03T16:10:37Z"
+        }
+      ]
+    },
+    {
+      "id": 100719988490,
+      "name": "Build&Test: node-24, ubuntu-latest",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-09-03T16:06:59Z",
+      "completed_at": "2026-09-03T16:11:03Z",
+      "runner_name": "GitHub Actions 1000452063",
+      "html_url": "https://github.com/vitejs/vite/actions/runs/33776637456/job/100719988490",
+      "steps": [
+        {
+          "number": 1,
+          "name": "Set up job",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:00Z",
+          "completed_at": "2026-09-03T16:07:01Z"
+        },
+        {
+          "number": 2,
+          "name": "Checkout",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:01Z",
+          "completed_at": "2026-09-03T16:07:03Z"
+        },
+        {
+          "number": 3,
+          "name": "Install pnpm",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:03Z",
+          "completed_at": "2026-09-03T16:07:10Z"
+        },
+        {
+          "number": 4,
+          "name": "Set node version to 24",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:10Z",
+          "completed_at": "2026-09-03T16:07:14Z"
+        },
+        {
+          "number": 5,
+          "name": "Set node version to 24 for builds",
+          "conclusion": "skipped",
+          "started_at": "2026-09-03T16:07:14Z",
+          "completed_at": "2026-09-03T16:07:14Z"
+        },
+        {
+          "number": 6,
+          "name": "Install deps",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:14Z",
+          "completed_at": "2026-09-03T16:07:29Z"
+        },
+        {
+          "number": 7,
+          "name": "(non-windows) Set Playwright path and Get playwright version",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:29Z",
+          "completed_at": "2026-09-03T16:07:29Z"
+        },
+        {
+          "number": 8,
+          "name": "(windows) Set Playwright path and Get playwright version",
+          "conclusion": "skipped",
+          "started_at": "2026-09-03T16:07:29Z",
+          "completed_at": "2026-09-03T16:07:29Z"
+        },
+        {
+          "number": 9,
+          "name": "Cache Playwright's binary",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:29Z",
+          "completed_at": "2026-09-03T16:07:32Z"
+        },
+        {
+          "number": 10,
+          "name": "Install Playwright",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:32Z",
+          "completed_at": "2026-09-03T16:07:34Z"
+        },
+        {
+          "number": 11,
+          "name": "Build",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:34Z",
+          "completed_at": "2026-09-03T16:07:44Z"
+        },
+        {
+          "number": 12,
+          "name": "Set node version to 24",
+          "conclusion": "skipped",
+          "started_at": "2026-09-03T16:07:44Z",
+          "completed_at": "2026-09-03T16:07:44Z"
+        },
+        {
+          "number": 13,
+          "name": "Test unit",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:44Z",
+          "completed_at": "2026-09-03T16:07:51Z"
+        },
+        {
+          "number": 14,
+          "name": "Test serve",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:07:51Z",
+          "completed_at": "2026-09-03T16:09:05Z"
+        },
+        {
+          "number": 15,
+          "name": "Test serve (bundled dev)",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:09:05Z",
+          "completed_at": "2026-09-03T16:10:01Z"
+        },
+        {
+          "number": 16,
+          "name": "Test build",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:10:01Z",
+          "completed_at": "2026-09-03T16:11:00Z"
+        },
+        {
+          "number": 29,
+          "name": "Post Cache Playwright's binary",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:11:00Z",
+          "completed_at": "2026-09-03T16:11:00Z"
+        },
+        {
+          "number": 30,
+          "name": "Post Set node version to 24",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:11:00Z",
+          "completed_at": "2026-09-03T16:11:00Z"
+        },
+        {
+          "number": 31,
+          "name": "Post Install pnpm",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:11:00Z",
+          "completed_at": "2026-09-03T16:11:00Z"
+        },
+        {
+          "number": 32,
+          "name": "Post Checkout",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:11:00Z",
+          "completed_at": "2026-09-03T16:11:01Z"
+        },
+        {
+          "number": 33,
+          "name": "Complete job",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:11:01Z",
+          "completed_at": "2026-09-03T16:11:01Z"
+        }
+      ]
+    },
+    {
+      "id": 100722297158,
+      "name": "Build & Test Passed or Skipped",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-09-03T16:13:58Z",
+      "completed_at": "2026-09-03T16:14:05Z",
+      "runner_name": "GitHub Actions 1000452065",
+      "html_url": "https://github.com/vitejs/vite/actions/runs/33776637456/job/100722297158",
+      "steps": [
+        {
+          "number": 1,
+          "name": "Set up job",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:14:01Z",
+          "completed_at": "2026-09-03T16:14:01Z"
+        },
+        {
+          "number": 2,
+          "name": "Run echo \"Build & Test Passed or Skipped\"",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:14:01Z",
+          "completed_at": "2026-09-03T16:14:02Z"
+        },
+        {
+          "number": 3,
+          "name": "Complete job",
+          "conclusion": "success",
+          "started_at": "2026-09-03T16:14:02Z",
+          "completed_at": "2026-09-03T16:14:02Z"
+        }
+      ]
+    },
+    {
+      "id": 100722299218,
+      "name": "Build & Test Failed",
+      "status": "completed",
+      "conclusion": "skipped",
+      "started_at": "2026-09-03T16:13:46Z",
+      "completed_at": "2026-09-03T16:13:46Z",
+      "runner_name": null,
+      "html_url": "https://github.com/vitejs/vite/actions/runs/33776637456/job/100722299218",
+      "steps": []
+    }
+  ]
+}

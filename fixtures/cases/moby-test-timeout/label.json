@@ -1,0 +1,7 @@
+{
+  "failure_class": "TIMEOUT",
+  "evidence_lines": [648],
+  "job_id": 105036634710,
+  "notes": "Go test binary's own panic: 'test timed out after 40m0s' -- an explicit timeout wrapper firing, not a network symptom, so TIMEOUT per tie-break #2.",
+  "ambiguous_with": null
+}

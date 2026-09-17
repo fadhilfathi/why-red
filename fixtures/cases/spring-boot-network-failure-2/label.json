@@ -1,0 +1,7 @@
+{
+  "failure_class": "NETWORK_FAILURE",
+  "evidence_lines": [4230],
+  "job_id": 100963655856,
+  "notes": "Same Connection reset by peer signature as spring-boot-network-failure, different run two days apart on the same repo/workflow.",
+  "ambiguous_with": null
+}

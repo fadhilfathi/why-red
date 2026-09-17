@@ -1,0 +1,7 @@
+{
+  "failure_class": "LINT_FAILURE",
+  "evidence_lines": [380, 416],
+  "job_id": 100572378803,
+  "notes": "Same eslint rules failing as vite-eslint-failure, different run two days apart; kept both because they show the identical rule set persisting across runs, useful for a future FLAKY_TEST-vs-persistent-failure contrast.",
+  "ambiguous_with": null
+}

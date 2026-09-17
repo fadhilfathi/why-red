@@ -1,0 +1,7 @@
+{
+  "failure_class": "TEST_FAILURE",
+  "evidence_lines": [614, 617],
+  "job_id": 95882116563,
+  "notes": "pytest FAILED with an AssertionError containing a structured eval-framework failure message (an LLM-eval test asserting a model's tool-use behaviour), plus the summary '1 failed, 29 passed'. Small (~200-star) repo, included for CI-messiness diversity per the harvest priorities: unlike the flagship-repo fixtures, this one runs against live external services (visible warnings about deprecated SDKs) rather than a clean, curated matrix.",
+  "ambiguous_with": null
+}

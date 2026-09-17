@@ -1,0 +1,7 @@
+{
+  "failure_class": "NETWORK_FAILURE",
+  "evidence_lines": [4107],
+  "job_id": 101015071945,
+  "notes": "java.io.IOException: Connection reset by peer during a network operation in the test/build step. No timeout-minutes boundary or explicit timeout wrapper visible near the error, so this is an immediate reset per tie-break #2, not TIMEOUT.",
+  "ambiguous_with": null
+}

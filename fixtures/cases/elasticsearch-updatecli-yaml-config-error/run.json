@@ -1,0 +1,404 @@
+{
+  "id": 30808003091,
+  "repo": "elastic/elasticsearch",
+  "workflow_name": "updatecli-compose",
+  "run_number": 522,
+  "run_attempt": 1,
+  "event": "workflow_dispatch",
+  "head_branch": "main",
+  "head_sha": "885340b408de4e2c40ad449feb9e26db57727597",
+  "status": "completed",
+  "conclusion": "failure",
+  "created_at": "2026-08-03T11:03:41Z",
+  "updated_at": "2026-08-03T11:32:37Z",
+  "html_url": "https://github.com/elastic/elasticsearch/actions/runs/30808003091",
+  "jobs": [
+    {
+      "id": 91667773031,
+      "name": "setup-matrix",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-08-03T11:03:52Z",
+      "completed_at": "2026-08-03T11:04:21Z",
+      "runner_name": "GitHub Actions 1013417798",
+      "html_url": "https://github.com/elastic/elasticsearch/actions/runs/30808003091/job/91667773031",
+      "steps": [
+        {
+          "number": 1,
+          "name": "Set up job",
+          "conclusion": "success",
+          "started_at": "2026-08-03T11:03:53Z",
+          "completed_at": "2026-08-03T11:03:54Z"
+        },
+        {
+          "number": 2,
+          "name": "Run actions/checkout@v4",
+          "conclusion": "success",
+          "started_at": "2026-08-03T11:03:54Z",
+          "completed_at": "2026-08-03T11:04:17Z"
+        },
+        {
+          "number": 3,
+          "name": "Run BRANCHES=$(jq -c '[.branches[].branch]' branches.json)",
+          "conclusion": "success",
+          "started_at": "2026-08-03T11:04:17Z",
+          "completed_at": "2026-08-03T11:04:17Z"
+        },
+        {
+          "number": 6,
+          "name": "Post Run actions/checkout@v4",
+          "conclusion": "success",
+          "started_at": "2026-08-03T11:04:17Z",
+          "completed_at": "2026-08-03T11:04:18Z"
+        },
+        {
+          "number": 7,
+          "name": "Complete job",
+          "conclusion": "success",
+          "started_at": "2026-08-03T11:04:18Z",
+          "completed_at": "2026-08-03T11:04:18Z"
+        }
+      ]
+    },
+    {
+      "id": 91667911927,
+      "name": "compose (9.4)",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-08-03T11:04:25Z",
+      "completed_at": "2026-08-03T11:27:04Z",
+      "runner_name": "GitHub Actions 1013417838",
+      "html_url": "https://github.com/elastic/elasticsearch/actions/runs/30808003091/job/91667911927",
+      "steps": [
+        {
+          "number": 1,
+          "name": "Set up job",
+          "conclusion": "success",
+          "started_at": "2026-08-03T11:04:25Z",
+          "completed_at": "2026-08-03T11:04:28Z"
+        },
+        {
+          "number": 2,
+          "name": "Run actions/checkout@v4",
+          "conclusion": "success",
+          "started_at": "2026-08-03T11:04:28Z",
+          "completed_at": "2026-08-03T11:04:49Z"
+        },
+        {
+          "number": 3,
+          "name": "Update branch in SCM values",
+          "conclusion": "success",
+          "started_at": "2026-08-03T11:04:49Z",
+          "completed_at": "2026-08-03T11:04:49Z"
+        },
+        {
+          "number": 4,
+          "name": "Run docker/login-action@0d4c9c5ea7693da7b068278f7b52bda2a190a446",
+          "conclusion": "success",
+          "started_at": "2026-08-03T11:04:49Z",
+          "completed_at": "2026-08-03T11:04:51Z"
+        },
+        {
+          "number": 5,
+          "name": "Run elastic/oblt-actions/updatecli/run@v1",
+          "conclusion": "success",
+          "started_at": "2026-08-03T11:04:51Z",
+          "completed_at": "2026-08-03T11:27:00Z"
+        },
+        {
+          "number": 9,
+          "name": "Post Run docker/login-action@0d4c9c5ea7693da7b068278f7b52bda2a190a446",
+          "conclusion": "success",
+          "started_at": "2026-08-03T11:27:00Z",
+          "completed_at": "2026-08-03T11:27:00Z"
+        },
+        {
+          "number": 10,
+          "name": "Post Run actions/checkout@v4",
+          "conclusion": "success",
+          "started_at": "2026-08-03T11:27:00Z",
+          "completed_at": "2026-08-03T11:27:00Z"
+        },
+        {
+          "number": 11,
+          "name": "Complete job",
+          "conclusion": "success",
+          "started_at": "2026-08-03T11:27:00Z",
+          "completed_at": "2026-08-03T11:27:00Z"
+        }
+      ]
+    },
+    {
+      "id": 91667911941,
+      "name": "compose (main)",
+      "status": "completed",
+      "conclusion": "failure",
+      "started_at": "2026-08-03T11:04:23Z",
+      "completed_at": "2026-08-03T11:32:37Z",
+      "runner_name": "GitHub Actions 1013417837",
+      "html_url": "https://github.com/elastic/elasticsearch/actions/runs/30808003091/job/91667911941",
+      "steps": [
+        {
+          "number": 1,
+          "name": "Set up job",
+          "conclusion": "success",
+          "started_at": "2026-08-03T11:04:23Z",
+          "completed_at": "2026-08-03T11:04:25Z"
+        },
+        {
+          "number": 2,
+          "name": "Run actions/checkout@v4",
+          "conclusion": "success",
+          "started_at": "2026-08-03T11:04:25Z",
+          "completed_at": "2026-08-03T11:04:48Z"
+        },
+        {
+          "number": 3,
+          "name": "Update branch in SCM values",
+          "conclusion": "success",
+          "started_at": "2026-08-03T11:04:48Z",
+          "completed_at": "2026-08-03T11:04:49Z"
+        },
+        {
+          "number": 4,
+          "name": "Run docker/login-action@0d4c9c5ea7693da7b068278f7b52bda2a190a446",
+          "conclusion": "success",
+          "started_at": "2026-08-03T11:04:49Z",
+          "completed_at": "2026-08-03T11:04:49Z"
+        },
+        {
+          "number": 5,
+          "name": "Run elastic/oblt-actions/updatecli/run@v1",
+          "conclusion": "failure",
+          "started_at": "2026-08-03T11:04:49Z",
+          "completed_at": "2026-08-03T11:32:34Z"
+        },
+        {
+          "number": 9,
+          "name": "Post Run docker/login-action@0d4c9c5ea7693da7b068278f7b52bda2a190a446",
+          "conclusion": "success",
+          "started_at": "2026-08-03T11:32:34Z",
+          "completed_at": "2026-08-03T11:32:35Z"
+        },
+        {
+          "number": 10,
+          "name": "Post Run actions/checkout@v4",
+          "conclusion": "success",
+          "started_at": "2026-08-03T11:32:35Z",
+          "completed_at": "2026-08-03T11:32:35Z"
+        },
+        {
+          "number": 11,
+          "name": "Complete job",
+          "conclusion": "success",
+          "started_at": "2026-08-03T11:32:35Z",
+          "completed_at": "2026-08-03T11:32:35Z"
+        }
+      ]
+    },
+    {
+      "id": 91667911945,
+      "name": "compose (9.3)",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-08-03T11:04:29Z",
+      "completed_at": "2026-08-03T11:29:04Z",
+      "runner_name": "GitHub Actions 1013417840",
+      "html_url": "https://github.com/elastic/elasticsearch/actions/runs/30808003091/job/91667911945",
+      "steps": [
+        {
+          "number": 1,
+          "name": "Set up job",
+          "conclusion": "success",
+          "started_at": "2026-08-03T11:04:29Z",
+          "completed_at": "2026-08-03T11:04:31Z"
+        },
+        {
+          "number": 2,
+          "name": "Run actions/checkout@v4",
+          "conclusion": "success",
+          "started_at": "2026-08-03T11:04:31Z",
+          "completed_at": "2026-08-03T11:04:51Z"
+        },
+        {
+          "number": 3,
+          "name": "Update branch in SCM values",
+          "conclusion": "success",
+          "started_at": "2026-08-03T11:04:51Z",
+          "completed_at": "2026-08-03T11:04:51Z"
+        },
+        {
+          "number": 4,
+          "name": "Run docker/login-action@0d4c9c5ea7693da7b068278f7b52bda2a190a446",
+          "conclusion": "success",
+          "started_at": "2026-08-03T11:04:51Z",
+          "completed_at": "2026-08-03T11:04:52Z"
+        },
+        {
+          "number": 5,
+          "name": "Run elastic/oblt-actions/updatecli/run@v1",
+          "conclusion": "success",
+          "started_at": "2026-08-03T11:04:52Z",
+          "completed_at": "2026-08-03T11:29:03Z"
+        },
+        {
+          "number": 9,
+          "name": "Post Run docker/login-action@0d4c9c5ea7693da7b068278f7b52bda2a190a446",
+          "conclusion": "success",
+          "started_at": "2026-08-03T11:29:03Z",
+          "completed_at": "2026-08-03T11:29:03Z"
+        },
+        {
+          "number": 10,
+          "name": "Post Run actions/checkout@v4",
+          "conclusion": "success",
+          "started_at": "2026-08-03T11:29:03Z",
+          "completed_at": "2026-08-03T11:29:03Z"
+        },
+        {
+          "number": 11,
+          "name": "Complete job",
+          "conclusion": "success",
+          "started_at": "2026-08-03T11:29:03Z",
+          "completed_at": "2026-08-03T11:29:03Z"
+        }
+      ]
+    },
+    {
+      "id": 91667911952,
+      "name": "compose (9.5)",
+      "status": "completed",
+      "conclusion": "failure",
+      "started_at": "2026-08-03T11:04:23Z",
+      "completed_at": "2026-08-03T11:30:39Z",
+      "runner_name": "GitHub Actions 1013417839",
+      "html_url": "https://github.com/elastic/elasticsearch/actions/runs/30808003091/job/91667911952",
+      "steps": [
+        {
+          "number": 1,
+          "name": "Set up job",
+          "conclusion": "success",
+          "started_at": "2026-08-03T11:04:24Z",
+          "completed_at": "2026-08-03T11:04:25Z"
+        },
+        {
+          "number": 2,
+          "name": "Run actions/checkout@v4",
+          "conclusion": "success",
+          "started_at": "2026-08-03T11:04:25Z",
+          "completed_at": "2026-08-03T11:04:48Z"
+        },
+        {
+          "number": 3,
+          "name": "Update branch in SCM values",
+          "conclusion": "success",
+          "started_at": "2026-08-03T11:04:48Z",
+          "completed_at": "2026-08-03T11:04:49Z"
+        },
+        {
+          "number": 4,
+          "name": "Run docker/login-action@0d4c9c5ea7693da7b068278f7b52bda2a190a446",
+          "conclusion": "success",
+          "started_at": "2026-08-03T11:04:49Z",
+          "completed_at": "2026-08-03T11:04:50Z"
+        },
+        {
+          "number": 5,
+          "name": "Run elastic/oblt-actions/updatecli/run@v1",
+          "conclusion": "failure",
+          "started_at": "2026-08-03T11:04:50Z",
+          "completed_at": "2026-08-03T11:30:37Z"
+        },
+        {
+          "number": 9,
+          "name": "Post Run docker/login-action@0d4c9c5ea7693da7b068278f7b52bda2a190a446",
+          "conclusion": "success",
+          "started_at": "2026-08-03T11:30:37Z",
+          "completed_at": "2026-08-03T11:30:37Z"
+        },
+        {
+          "number": 10,
+          "name": "Post Run actions/checkout@v4",
+          "conclusion": "success",
+          "started_at": "2026-08-03T11:30:37Z",
+          "completed_at": "2026-08-03T11:30:37Z"
+        },
+        {
+          "number": 11,
+          "name": "Complete job",
+          "conclusion": "success",
+          "started_at": "2026-08-03T11:30:37Z",
+          "completed_at": "2026-08-03T11:30:37Z"
+        }
+      ]
+    },
+    {
+      "id": 91667911964,
+      "name": "compose (8.19)",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-08-03T11:04:23Z",
+      "completed_at": "2026-08-03T11:26:21Z",
+      "runner_name": "GitHub Actions 1013417841",
+      "html_url": "https://github.com/elastic/elasticsearch/actions/runs/30808003091/job/91667911964",
+      "steps": [
+        {
+          "number": 1,
+          "name": "Set up job",
+          "conclusion": "success",
+          "started_at": "2026-08-03T11:04:24Z",
+          "completed_at": "2026-08-03T11:04:27Z"
+        },
+        {
+          "number": 2,
+          "name": "Run actions/checkout@v4",
+          "conclusion": "success",
+          "started_at": "2026-08-03T11:04:27Z",
+          "completed_at": "2026-08-03T11:04:51Z"
+        },
+        {
+          "number": 3,
+          "name": "Update branch in SCM values",
+          "conclusion": "success",
+          "started_at": "2026-08-03T11:04:51Z",
+          "completed_at": "2026-08-03T11:04:51Z"
+        },
+        {
+          "number": 4,
+          "name": "Run docker/login-action@0d4c9c5ea7693da7b068278f7b52bda2a190a446",
+          "conclusion": "success",
+          "started_at": "2026-08-03T11:04:51Z",
+          "completed_at": "2026-08-03T11:04:52Z"
+        },
+        {
+          "number": 5,
+          "name": "Run elastic/oblt-actions/updatecli/run@v1",
+          "conclusion": "success",
+          "started_at": "2026-08-03T11:04:52Z",
+          "completed_at": "2026-08-03T11:26:19Z"
+        },
+        {
+          "number": 9,
+          "name": "Post Run docker/login-action@0d4c9c5ea7693da7b068278f7b52bda2a190a446",
+          "conclusion": "success",
+          "started_at": "2026-08-03T11:26:19Z",
+          "completed_at": "2026-08-03T11:26:20Z"
+        },
+        {
+          "number": 10,
+          "name": "Post Run actions/checkout@v4",
+          "conclusion": "success",
+          "started_at": "2026-08-03T11:26:20Z",
+          "completed_at": "2026-08-03T11:26:20Z"
+        },
+        {
+          "number": 11,
+          "name": "Complete job",
+          "conclusion": "success",
+          "started_at": "2026-08-03T11:26:20Z",
+          "completed_at": "2026-08-03T11:26:20Z"
+        }
+      ]
+    }
+  ]
+}

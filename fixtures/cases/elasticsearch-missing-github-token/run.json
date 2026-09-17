@@ -1,0 +1,165 @@
+{
+  "id": 33673826648,
+  "repo": "elastic/elasticsearch",
+  "workflow_name": "docs-deploy",
+  "run_number": 45990,
+  "run_attempt": 1,
+  "event": "workflow_run",
+  "head_branch": "main",
+  "head_sha": "9cb20ba303ec0dab95a9baaf28dcc0f5992347a5",
+  "status": "completed",
+  "conclusion": "failure",
+  "created_at": "2026-09-02T19:31:37Z",
+  "updated_at": "2026-09-02T19:33:48Z",
+  "html_url": "https://github.com/elastic/elasticsearch/actions/runs/33673826648",
+  "jobs": [
+    {
+      "id": 100393620948,
+      "name": "deploy / preflight",
+      "status": "completed",
+      "conclusion": "failure",
+      "started_at": "2026-09-02T19:31:40Z",
+      "completed_at": "2026-09-02T19:33:45Z",
+      "runner_name": "GitHub Actions 1015197197",
+      "html_url": "https://github.com/elastic/elasticsearch/actions/runs/33673826648/job/100393620948",
+      "steps": [
+        {
+          "number": 1,
+          "name": "Set up job",
+          "conclusion": "success",
+          "started_at": "2026-09-02T19:31:40Z",
+          "completed_at": "2026-09-02T19:31:42Z"
+        },
+        {
+          "number": 2,
+          "name": "Pull ghcr.io/elastic/docs-builder:edge",
+          "conclusion": "success",
+          "started_at": "2026-09-02T19:31:42Z",
+          "completed_at": "2026-09-02T19:31:43Z"
+        },
+        {
+          "number": 3,
+          "name": "Resolve workflow run context",
+          "conclusion": "success",
+          "started_at": "2026-09-02T19:31:43Z",
+          "completed_at": "2026-09-02T19:31:45Z"
+        },
+        {
+          "number": 4,
+          "name": "Match content source",
+          "conclusion": "success",
+          "started_at": "2026-09-02T19:31:45Z",
+          "completed_at": "2026-09-02T19:31:45Z"
+        },
+        {
+          "number": 5,
+          "name": "Fetch ephemeral GitHub token",
+          "conclusion": "success",
+          "started_at": "2026-09-02T19:31:45Z",
+          "completed_at": "2026-09-02T19:33:44Z"
+        },
+        {
+          "number": 6,
+          "name": "Check org membership",
+          "conclusion": "failure",
+          "started_at": "2026-09-02T19:33:44Z",
+          "completed_at": "2026-09-02T19:33:44Z"
+        },
+        {
+          "number": 7,
+          "name": "Evaluate",
+          "conclusion": "skipped",
+          "started_at": "2026-09-02T19:33:44Z",
+          "completed_at": "2026-09-02T19:33:44Z"
+        },
+        {
+          "number": 8,
+          "name": "Link index branch eligibility",
+          "conclusion": "skipped",
+          "started_at": "2026-09-02T19:33:44Z",
+          "completed_at": "2026-09-02T19:33:44Z"
+        },
+        {
+          "number": 16,
+          "name": "Post Fetch ephemeral GitHub token",
+          "conclusion": "success",
+          "started_at": "2026-09-02T19:33:44Z",
+          "completed_at": "2026-09-02T19:33:44Z"
+        },
+        {
+          "number": 17,
+          "name": "Complete job",
+          "conclusion": "success",
+          "started_at": "2026-09-02T19:33:44Z",
+          "completed_at": "2026-09-02T19:33:44Z"
+        }
+      ]
+    },
+    {
+      "id": 100394323339,
+      "name": "deploy / build",
+      "status": "completed",
+      "conclusion": "skipped",
+      "started_at": "2026-09-02T19:33:46Z",
+      "completed_at": "2026-09-02T19:33:46Z",
+      "runner_name": null,
+      "html_url": "https://github.com/elastic/elasticsearch/actions/runs/33673826648/job/100394323339",
+      "steps": []
+    },
+    {
+      "id": 100394323517,
+      "name": "deploy / vale-report",
+      "status": "completed",
+      "conclusion": "skipped",
+      "started_at": "2026-09-02T19:33:46Z",
+      "completed_at": "2026-09-02T19:33:46Z",
+      "runner_name": null,
+      "html_url": "https://github.com/elastic/elasticsearch/actions/runs/33673826648/job/100394323517",
+      "steps": []
+    },
+    {
+      "id": 100394323917,
+      "name": "deploy / pre-comment",
+      "status": "completed",
+      "conclusion": "skipped",
+      "started_at": "2026-09-02T19:33:46Z",
+      "completed_at": "2026-09-02T19:33:46Z",
+      "runner_name": null,
+      "html_url": "https://github.com/elastic/elasticsearch/actions/runs/33673826648/job/100394323917",
+      "steps": []
+    },
+    {
+      "id": 100394324722,
+      "name": "deploy / update-link-index",
+      "status": "completed",
+      "conclusion": "skipped",
+      "started_at": "2026-09-02T19:33:46Z",
+      "completed_at": "2026-09-02T19:33:46Z",
+      "runner_name": null,
+      "html_url": "https://github.com/elastic/elasticsearch/actions/runs/33673826648/job/100394324722",
+      "steps": []
+    },
+    {
+      "id": 100394325172,
+      "name": "deploy / deploy-preview",
+      "status": "completed",
+      "conclusion": "skipped",
+      "started_at": "2026-09-02T19:33:46Z",
+      "completed_at": "2026-09-02T19:33:46Z",
+      "runner_name": null,
+      "html_url": "https://github.com/elastic/elasticsearch/actions/runs/33673826648/job/100394325172",
+      "steps": []
+    },
+    {
+      "id": 100394325468,
+      "name": "deploy / comment",
+      "status": "completed",
+      "conclusion": "skipped",
+      "started_at": "2026-09-02T19:33:47Z",
+      "completed_at": "2026-09-02T19:33:46Z",
+      "runner_name": null,
+      "html_url": "https://github.com/elastic/elasticsearch/actions/runs/33673826648/job/100394325468",
+      "steps": []
+    }
+  ]
+}

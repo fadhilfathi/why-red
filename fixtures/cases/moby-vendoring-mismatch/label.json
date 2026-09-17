@@ -1,0 +1,7 @@
+{
+  "failure_class": "DEPENDENCY_RESOLUTION",
+  "evidence_lines": [1921, 1928],
+  "job_id": 105009844801,
+  "notes": "go build fails with 'inconsistent vendoring': go.mod requires memberlist@v0.7.0 but vendor/modules.txt marks v0.6.0 explicit. This is Go's own dependency-resolution step failing before compilation proper, not a compiler error about the code itself, so DEPENDENCY_RESOLUTION per the criteria row (package manager step fails before project tooling runs) and tie-break #3. An unrelated cache-restore rate-limit warning appears earlier in the log (line ~142) but is not the cause -- the build proceeded past it -- so this fixture is NOT used for RATE_LIMITED (would violate tie-break #5's causal-link requirement). Originally mis-probed and misnamed 'moby-rate-limited'; renamed after reading the real root cause.",
+  "ambiguous_with": "COMPILATION_ERROR"
+}

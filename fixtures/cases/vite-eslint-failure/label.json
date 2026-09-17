@@ -1,0 +1,7 @@
+{
+  "failure_class": "LINT_FAILURE",
+  "evidence_lines": [378, 414],
+  "job_id": 100719856234,
+  "notes": "eslint reports 13 errors (no-useless-assignment, preserve-caught-error), summary '13 problems (13 errors, 0 warnings)', step exits non-zero.",
+  "ambiguous_with": null
+}

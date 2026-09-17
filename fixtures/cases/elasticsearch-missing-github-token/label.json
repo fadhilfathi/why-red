@@ -1,0 +1,7 @@
+{
+  "failure_class": "MISSING_SECRET",
+  "evidence_lines": [553, 564],
+  "job_id": 100393620948,
+  "notes": "A GitHub Action input requiring a token was not supplied: 'Error: Input required and not supplied: github-token'. Explicit evidence the credential itself was absent, not merely a rejected request, so MISSING_SECRET wins tie-break #4 over AUTH_FAILURE.",
+  "ambiguous_with": "AUTH_FAILURE"
+}

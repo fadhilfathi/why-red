@@ -1,0 +1,143 @@
+{
+  "id": 32188190276,
+  "repo": "strands-agents/evals",
+  "workflow_name": "Secure Integration test",
+  "run_number": 798,
+  "run_attempt": 1,
+  "event": "pull_request_target",
+  "head_branch": "openai-openinference",
+  "head_sha": "dbbbd53794f2cc0c38a25722bcf0a55116bc4509",
+  "status": "completed",
+  "conclusion": "failure",
+  "created_at": "2026-08-18T21:31:48Z",
+  "updated_at": "2026-08-18T22:14:00Z",
+  "html_url": "https://github.com/strands-agents/evals/actions/runs/32188190276",
+  "jobs": [
+    {
+      "id": 95876551017,
+      "name": "Check access",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-08-18T21:53:03Z",
+      "completed_at": "2026-08-18T21:53:08Z",
+      "runner_name": "GitHub Actions 1027891731",
+      "html_url": "https://github.com/strands-agents/evals/actions/runs/32188190276/job/95876551017",
+      "steps": [
+        {
+          "number": 1,
+          "name": "Set up job",
+          "conclusion": "success",
+          "started_at": "2026-08-18T21:53:04Z",
+          "completed_at": "2026-08-18T21:53:05Z"
+        },
+        {
+          "number": 2,
+          "name": "Collaborator Check",
+          "conclusion": "success",
+          "started_at": "2026-08-18T21:53:05Z",
+          "completed_at": "2026-08-18T21:53:06Z"
+        },
+        {
+          "number": 3,
+          "name": "Complete job",
+          "conclusion": "success",
+          "started_at": "2026-08-18T21:53:06Z",
+          "completed_at": "2026-08-18T21:53:06Z"
+        }
+      ]
+    },
+    {
+      "id": 95876551906,
+      "name": "Validate workflow_call ref",
+      "status": "completed",
+      "conclusion": "skipped",
+      "started_at": "2026-08-18T21:31:49Z",
+      "completed_at": "2026-08-18T21:31:48Z",
+      "runner_name": null,
+      "html_url": "https://github.com/strands-agents/evals/actions/runs/32188190276/job/95876551906",
+      "steps": []
+    },
+    {
+      "id": 95882116563,
+      "name": "Run integration tests",
+      "status": "completed",
+      "conclusion": "failure",
+      "started_at": "2026-08-18T22:12:23Z",
+      "completed_at": "2026-08-18T22:14:00Z",
+      "runner_name": "GitHub Actions 1027895508",
+      "html_url": "https://github.com/strands-agents/evals/actions/runs/32188190276/job/95882116563",
+      "steps": [
+        {
+          "number": 1,
+          "name": "Set up job",
+          "conclusion": "success",
+          "started_at": "2026-08-18T22:12:24Z",
+          "completed_at": "2026-08-18T22:12:25Z"
+        },
+        {
+          "number": 2,
+          "name": "Configure Credentials",
+          "conclusion": "success",
+          "started_at": "2026-08-18T22:12:25Z",
+          "completed_at": "2026-08-18T22:12:25Z"
+        },
+        {
+          "number": 3,
+          "name": "Checkout head commit",
+          "conclusion": "success",
+          "started_at": "2026-08-18T22:12:25Z",
+          "completed_at": "2026-08-18T22:12:26Z"
+        },
+        {
+          "number": 4,
+          "name": "Set up Python",
+          "conclusion": "success",
+          "started_at": "2026-08-18T22:12:26Z",
+          "completed_at": "2026-08-18T22:12:27Z"
+        },
+        {
+          "number": 5,
+          "name": "Install dependencies",
+          "conclusion": "success",
+          "started_at": "2026-08-18T22:12:27Z",
+          "completed_at": "2026-08-18T22:12:34Z"
+        },
+        {
+          "number": 6,
+          "name": "Run integration tests",
+          "conclusion": "failure",
+          "started_at": "2026-08-18T22:12:34Z",
+          "completed_at": "2026-08-18T22:13:58Z"
+        },
+        {
+          "number": 10,
+          "name": "Post Set up Python",
+          "conclusion": "skipped",
+          "started_at": "2026-08-18T22:13:58Z",
+          "completed_at": "2026-08-18T22:13:58Z"
+        },
+        {
+          "number": 11,
+          "name": "Post Checkout head commit",
+          "conclusion": "success",
+          "started_at": "2026-08-18T22:13:58Z",
+          "completed_at": "2026-08-18T22:13:58Z"
+        },
+        {
+          "number": 12,
+          "name": "Post Configure Credentials",
+          "conclusion": "success",
+          "started_at": "2026-08-18T22:13:58Z",
+          "completed_at": "2026-08-18T22:13:58Z"
+        },
+        {
+          "number": 13,
+          "name": "Complete job",
+          "conclusion": "success",
+          "started_at": "2026-08-18T22:13:58Z",
+          "completed_at": "2026-08-18T22:13:58Z"
+        }
+      ]
+    }
+  ]
+}

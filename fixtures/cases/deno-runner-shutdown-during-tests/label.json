@@ -1,0 +1,7 @@
+{
+  "failure_class": "INFRASTRUCTURE",
+  "evidence_lines": [3154],
+  "job_id": 105161301519,
+  "notes": "Step 'Run tests' shows two real FAILED test lines around 10:10:08 (debugger/watch-mode tests), then at 10:16:02 -- nearly 6 minutes later -- 'The runner has received a shutdown signal' and the step exits on signal (code 143 = SIGTERM), not on the test runner's own exit code. Per tie-break #6, INFRASTRUCTURE wins because the step's actual termination is the explicit shutdown, not the test runner completing. This is the 'stack trace but the real cause is elsewhere' awkward case.",
+  "ambiguous_with": "TEST_FAILURE"
+}

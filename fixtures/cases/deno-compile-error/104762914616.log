@@ -1,0 +1,672 @@
+2026-09-16T10:45:07.0877700Z Current runner version: '2.337.0'
+2026-09-16T10:45:07.0902860Z ##[group]Runner Image Provisioner
+2026-09-16T10:45:07.0904050Z Hosted Compute Agent
+2026-09-16T10:45:07.0904450Z Version: 20260828.587
+2026-09-16T10:45:07.0904890Z Commit: abac92662cab4cc7352de4f9f9d2e2419aad9c29
+2026-09-16T10:45:07.0905400Z Build Date: 2026-08-28T16:44:25Z
+2026-09-16T10:45:07.0905960Z Worker ID: {b7835175-17e8-47a2-ac28-9814dd607daa}
+2026-09-16T10:45:07.0906490Z Azure Region: westus
+2026-09-16T10:45:07.0906890Z ##[endgroup]
+2026-09-16T10:45:07.0908280Z ##[group]Operating System
+2026-09-16T10:45:07.0908700Z macOS
+2026-09-16T10:45:07.0909190Z 14.8.9
+2026-09-16T10:45:07.0909620Z 23J631
+2026-09-16T10:45:07.0910070Z ##[endgroup]
+2026-09-16T10:45:07.0910450Z ##[group]Runner Image
+2026-09-16T10:45:07.0910850Z Image: macos-14-arm64
+2026-09-16T10:45:07.0911260Z Version: 20260831.0302.1
+2026-09-16T10:45:07.0912210Z Included Software: https://github.com/actions/runner-images/blob/macos-14-arm64/20260831.0302/images/macos/macos-14-arm64-Readme.md
+2026-09-16T10:45:07.0913380Z Image Release: https://github.com/actions/runner-images/releases/tag/macos-14-arm64%2F20260831.0302
+2026-09-16T10:45:07.0914070Z ##[endgroup]
+2026-09-16T10:45:07.0914940Z ##[group]GITHUB_TOKEN Permissions
+2026-09-16T10:45:07.0916880Z Contents: read
+2026-09-16T10:45:07.0917280Z Metadata: read
+2026-09-16T10:45:07.0917660Z ##[endgroup]
+2026-09-16T10:45:07.0919570Z Secret source: None
+2026-09-16T10:45:07.0920310Z Cache mode: write
+2026-09-16T10:45:07.0920930Z Prepare workflow directory
+2026-09-16T10:45:07.1441670Z Prepare all required actions
+2026-09-16T10:45:07.1480830Z Getting action download info
+2026-09-16T10:45:07.5433460Z Download action repository 'actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd' (SHA:de0fac2e4500dabe0009e67214ff5f5447ce83dd)
+2026-09-16T10:45:08.0375010Z Download action repository 'denoland/setup-deno@667a34cdef165d8d2b2e98dde39547c9daac7282' (SHA:667a34cdef165d8d2b2e98dde39547c9daac7282)
+2026-09-16T10:45:08.7101960Z Download action repository 'actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830' (SHA:0057852bfaa89a56745cba8c7296529d2fc39830)
+2026-09-16T10:45:08.7989860Z Download action repository 'dsherret/rust-toolchain-file@3551321aa44dd44a0393eb3b6bdfbc5d25ecf621' (SHA:3551321aa44dd44a0393eb3b6bdfbc5d25ecf621)
+2026-09-16T10:45:09.1550980Z Download action repository 'actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f' (SHA:b7c566a772e6b6bfb58ed0dc250532a479d7789f)
+2026-09-16T10:45:09.4187650Z Complete job name: build debug macos-aarch64
+2026-09-16T10:45:09.4753410Z ##[group]Run git config --global core.symlinks true
+2026-09-16T10:45:09.4754120Z [36;1mgit config --global core.symlinks true[0m
+2026-09-16T10:45:09.4754640Z [36;1mgit config --global fetch.parallel 32[0m
+2026-09-16T10:45:09.4841800Z shell: /bin/bash --noprofile --norc -e -o pipefail {0}
+2026-09-16T10:45:09.4842640Z env:
+2026-09-16T10:45:09.4843120Z   CARGO_TERM_COLOR: always
+2026-09-16T10:45:09.4843540Z   RUST_BACKTRACE: full
+2026-09-16T10:45:09.4843940Z   RUST_LIB_BACKTRACE: 0
+2026-09-16T10:45:09.4844380Z ##[endgroup]
+2026-09-16T10:45:09.5928590Z ##[group]Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+2026-09-16T10:45:09.5929320Z with:
+2026-09-16T10:45:09.5929710Z   fetch-depth: 5
+2026-09-16T10:45:09.5930170Z   submodules: false
+2026-09-16T10:45:09.5930560Z   repository: denoland/deno
+2026-09-16T10:45:09.5933630Z   token: ***
+2026-09-16T10:45:09.5934030Z   ssh-strict: true
+2026-09-16T10:45:09.5934380Z   ssh-user: git
+2026-09-16T10:45:09.5934750Z   persist-credentials: true
+2026-09-16T10:45:09.5935150Z   clean: true
+2026-09-16T10:45:09.5935530Z   sparse-checkout-cone-mode: true
+2026-09-16T10:45:09.5936030Z   fetch-tags: false
+2026-09-16T10:45:09.5936470Z   show-progress: true
+2026-09-16T10:45:09.5936840Z   lfs: false
+2026-09-16T10:45:09.5937190Z   set-safe-directory: true
+2026-09-16T10:45:09.5937600Z env:
+2026-09-16T10:45:09.5937950Z   CARGO_TERM_COLOR: always
+2026-09-16T10:45:09.5938420Z   RUST_BACKTRACE: full
+2026-09-16T10:45:09.5938830Z   RUST_LIB_BACKTRACE: 0
+2026-09-16T10:45:09.5939980Z ##[endgroup]
+2026-09-16T10:45:09.9631730Z Syncing repository: denoland/deno
+2026-09-16T10:45:09.9636080Z ##[group]Getting Git version info
+2026-09-16T10:45:09.9636800Z Working directory is '/Users/runner/work/deno/deno'
+2026-09-16T10:45:09.9637910Z [command]/opt/homebrew/bin/git version
+2026-09-16T10:45:09.9638460Z git version 2.55.0
+2026-09-16T10:45:09.9654100Z ##[endgroup]
+2026-09-16T10:45:09.9664670Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/d3c8b0fc-72c6-4097-aa07-5a80f10f7a40/.gitconfig'
+2026-09-16T10:45:09.9673340Z Temporarily overriding HOME='/Users/runner/work/_temp/d3c8b0fc-72c6-4097-aa07-5a80f10f7a40' before making global git config changes
+2026-09-16T10:45:09.9676490Z Adding repository directory to the temporary git global config as a safe directory
+2026-09-16T10:45:09.9679260Z [command]/opt/homebrew/bin/git config --global --add safe.directory /Users/runner/work/deno/deno
+2026-09-16T10:45:09.9737280Z Deleting the contents of '/Users/runner/work/deno/deno'
+2026-09-16T10:45:09.9740670Z ##[group]Initializing the repository
+2026-09-16T10:45:09.9743900Z [command]/opt/homebrew/bin/git init /Users/runner/work/deno/deno
+2026-09-16T10:45:09.9957720Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-09-16T10:45:09.9959920Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-09-16T10:45:09.9961080Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-09-16T10:45:09.9961780Z hint: call:
+2026-09-16T10:45:09.9962190Z hint:
+2026-09-16T10:45:09.9963300Z hint: 	git config --global init.defaultBranch <name>
+2026-09-16T10:45:09.9963930Z hint:
+2026-09-16T10:45:09.9964700Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-09-16T10:45:09.9965590Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-09-16T10:45:09.9966300Z hint:
+2026-09-16T10:45:09.9966700Z hint: 	git branch -m <name>
+2026-09-16T10:45:09.9967160Z hint:
+2026-09-16T10:45:09.9967780Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-09-16T10:45:09.9969000Z Initialized empty Git repository in /Users/runner/work/deno/deno/.git/
+2026-09-16T10:45:09.9977850Z [command]/opt/homebrew/bin/git remote add origin https://github.com/denoland/deno
+2026-09-16T10:45:10.0090540Z ##[endgroup]
+2026-09-16T10:45:10.0093040Z ##[group]Disabling automatic garbage collection
+2026-09-16T10:45:10.0095100Z [command]/opt/homebrew/bin/git config --local gc.auto 0
+2026-09-16T10:45:10.0189320Z ##[endgroup]
+2026-09-16T10:45:10.0190100Z ##[group]Setting up auth
+2026-09-16T10:45:10.0191110Z Removing SSH command configuration
+2026-09-16T10:45:10.0194140Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-16T10:45:10.0288810Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-16T10:45:10.1083580Z Removing HTTP extra header
+2026-09-16T10:45:10.1085880Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-16T10:45:10.1138800Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-16T10:45:10.1883760Z Removing includeIf entries pointing to credentials config files
+2026-09-16T10:45:10.1885000Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-09-16T10:45:10.1932840Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-09-16T10:45:10.3043290Z [command]/opt/homebrew/bin/git config --file /Users/runner/work/_temp/git-credentials-9317e717-f963-4bfd-ac99-aae40172e639.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-09-16T10:45:10.3047880Z [command]/opt/homebrew/bin/git config --local includeIf.gitdir:/Users/runner/work/deno/deno/.git.path /Users/runner/work/_temp/git-credentials-9317e717-f963-4bfd-ac99-aae40172e639.config
+2026-09-16T10:45:10.3050960Z [command]/opt/homebrew/bin/git config --local includeIf.gitdir:/Users/runner/work/deno/deno/.git/worktrees/*.path /Users/runner/work/_temp/git-credentials-9317e717-f963-4bfd-ac99-aae40172e639.config
+2026-09-16T10:45:10.3064230Z [command]/opt/homebrew/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-9317e717-f963-4bfd-ac99-aae40172e639.config
+2026-09-16T10:45:10.3096850Z [command]/opt/homebrew/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-9317e717-f963-4bfd-ac99-aae40172e639.config
+2026-09-16T10:45:10.3208830Z ##[endgroup]
+2026-09-16T10:45:10.3209890Z ##[group]Fetching the repository
+2026-09-16T10:45:10.3224650Z [command]/opt/homebrew/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=5 origin +7dbb1216328ac32f1404d2919e725b5fd05be075:refs/remotes/pull/36849/merge
+2026-09-16T10:45:11.8683170Z From https://github.com/denoland/deno
+2026-09-16T10:45:11.8786720Z  * [new ref]           7dbb1216328ac32f1404d2919e725b5fd05be075 -> pull/36849/merge
+2026-09-16T10:45:11.8881670Z ##[endgroup]
+2026-09-16T10:45:11.8882710Z ##[group]Determining the checkout info
+2026-09-16T10:45:11.8883910Z ##[endgroup]
+2026-09-16T10:45:11.8885710Z [command]/opt/homebrew/bin/git sparse-checkout disable
+2026-09-16T10:45:11.8892310Z [command]/opt/homebrew/bin/git config --local --unset-all extensions.worktreeConfig
+2026-09-16T10:45:11.8894660Z ##[group]Checking out the ref
+2026-09-16T10:45:11.8895920Z [command]/opt/homebrew/bin/git checkout --progress --force refs/remotes/pull/36849/merge
+2026-09-16T10:45:13.1030980Z Updating files:  27% (4025/14856)
+2026-09-16T10:45:13.1506370Z Updating files:  28% (4160/14856)
+2026-09-16T10:45:13.1629560Z Updating files:  29% (4309/14856)
+2026-09-16T10:45:13.2056180Z Updating files:  30% (4457/14856)
+2026-09-16T10:45:13.2243670Z Updating files:  31% (4606/14856)
+2026-09-16T10:45:13.2415980Z Updating files:  32% (4754/14856)
+2026-09-16T10:45:13.2850060Z Updating files:  33% (4903/14856)
+2026-09-16T10:45:13.2978760Z Updating files:  34% (5052/14856)
+2026-09-16T10:45:13.3408610Z Updating files:  35% (5200/14856)
+2026-09-16T10:45:13.3810250Z Updating files:  36% (5349/14856)
+2026-09-16T10:45:13.3925420Z Updating files:  37% (5497/14856)
+2026-09-16T10:45:13.4047830Z Updating files:  38% (5646/14856)
+2026-09-16T10:45:13.4482740Z Updating files:  39% (5794/14856)
+2026-09-16T10:45:13.4630150Z Updating files:  40% (5943/14856)
+2026-09-16T10:45:13.5101430Z Updating files:  41% (6091/14856)
+2026-09-16T10:45:13.5281570Z Updating files:  42% (6240/14856)
+2026-09-16T10:45:13.5431260Z Updating files:  43% (6389/14856)
+2026-09-16T10:45:13.5622930Z Updating files:  44% (6537/14856)
+2026-09-16T10:45:13.5817040Z Updating files:  45% (6686/14856)
+2026-09-16T10:45:13.5982450Z Updating files:  46% (6834/14856)
+2026-09-16T10:45:13.6121210Z Updating files:  47% (6983/14856)
+2026-09-16T10:45:13.6317880Z Updating files:  48% (7131/14856)
+2026-09-16T10:45:13.6544520Z Updating files:  49% (7280/14856)
+2026-09-16T10:45:13.6734800Z Updating files:  50% (7428/14856)
+2026-09-16T10:45:13.6896080Z Updating files:  51% (7577/14856)
+2026-09-16T10:45:13.7061190Z Updating files:  52% (7726/14856)
+2026-09-16T10:45:13.7227250Z Updating files:  53% (7874/14856)
+2026-09-16T10:45:13.7388640Z Updating files:  54% (8023/14856)
+2026-09-16T10:45:13.7559920Z Updating files:  55% (8171/14856)
+2026-09-16T10:45:13.7745760Z Updating files:  56% (8320/14856)
+2026-09-16T10:45:13.7933460Z Updating files:  57% (8468/14856)
+2026-09-16T10:45:13.8085660Z Updating files:  58% (8617/14856)
+2026-09-16T10:45:13.8286400Z Updating files:  59% (8766/14856)
+2026-09-16T10:45:13.8444480Z Updating files:  60% (8914/14856)
+2026-09-16T10:45:13.8675860Z Updating files:  61% (9063/14856)
+2026-09-16T10:45:13.8859650Z Updating files:  62% (9211/14856)
+2026-09-16T10:45:13.9036770Z Updating files:  63% (9360/14856)
+2026-09-16T10:45:13.9152080Z Updating files:  64% (9508/14856)
+2026-09-16T10:45:13.9183640Z Updating files:  64% (9629/14856)
+2026-09-16T10:45:13.9331780Z Updating files:  65% (9657/14856)
+2026-09-16T10:45:13.9492060Z Updating files:  66% (9805/14856)
+2026-09-16T10:45:13.9684290Z Updating files:  67% (9954/14856)
+2026-09-16T10:45:13.9891980Z Updating files:  68% (10103/14856)
+2026-09-16T10:45:14.0041810Z Updating files:  69% (10251/14856)
+2026-09-16T10:45:14.0200240Z Updating files:  70% (10400/14856)
+2026-09-16T10:45:14.0382870Z Updating files:  71% (10548/14856)
+2026-09-16T10:45:14.0555280Z Updating files:  72% (10697/14856)
+2026-09-16T10:45:14.0743370Z Updating files:  73% (10845/14856)
+2026-09-16T10:45:14.0948200Z Updating files:  74% (10994/14856)
+2026-09-16T10:45:14.1079070Z Updating files:  75% (11142/14856)
+2026-09-16T10:45:14.1254700Z Updating files:  76% (11291/14856)
+2026-09-16T10:45:14.1409960Z Updating files:  77% (11440/14856)
+2026-09-16T10:45:14.1678050Z Updating files:  78% (11588/14856)
+2026-09-16T10:45:14.1931810Z Updating files:  79% (11737/14856)
+2026-09-16T10:45:14.2198260Z Updating files:  80% (11885/14856)
+2026-09-16T10:45:14.3338250Z Updating files:  81% (12034/14856)
+2026-09-16T10:45:14.3528260Z Updating files:  82% (12182/14856)
+2026-09-16T10:45:14.3653480Z Updating files:  83% (12331/14856)
+2026-09-16T10:45:14.3783240Z Updating files:  84% (12480/14856)
+2026-09-16T10:45:14.3916180Z Updating files:  85% (12628/14856)
+2026-09-16T10:45:14.4029220Z Updating files:  86% (12777/14856)
+2026-09-16T10:45:14.4153660Z Updating files:  87% (12925/14856)
+2026-09-16T10:45:14.4274140Z Updating files:  88% (13074/14856)
+2026-09-16T10:45:14.4395630Z Updating files:  89% (13222/14856)
+2026-09-16T10:45:14.4533410Z Updating files:  90% (13371/14856)
+2026-09-16T10:45:14.4778370Z Updating files:  91% (13519/14856)
+2026-09-16T10:45:14.4948350Z Updating files:  92% (13668/14856)
+2026-09-16T10:45:14.5157230Z Updating files:  93% (13817/14856)
+2026-09-16T10:45:14.5312400Z Updating files:  94% (13965/14856)
+2026-09-16T10:45:14.5442630Z Updating files:  95% (14114/14856)
+2026-09-16T10:45:14.5598900Z Updating files:  96% (14262/14856)
+2026-09-16T10:45:14.5780850Z Updating files:  97% (14411/14856)
+2026-09-16T10:45:14.5970580Z Updating files:  98% (14559/14856)
+2026-09-16T10:45:14.6141270Z Updating files:  99% (14708/14856)
+2026-09-16T10:45:14.6142300Z Updating files: 100% (14856/14856)
+2026-09-16T10:45:14.6142850Z Updating files: 100% (14856/14856), done.
+2026-09-16T10:45:14.6335680Z HEAD is now at 7dbb1216 Merge 7e8727ecb13cacf2090e26c902adc65057f4ebed into 685eb3b4b4ffaf2770480b8a99021e8b03292786
+2026-09-16T10:45:14.6352380Z ##[endgroup]
+2026-09-16T10:45:14.6475290Z [command]/opt/homebrew/bin/git log -1 --format=%H
+2026-09-16T10:45:14.6535350Z 7dbb1216328ac32f1404d2919e725b5fd05be075
+2026-09-16T10:45:14.6688740Z ##[group]Run git submodule update --init --recursive --depth=1 -- ./tests/util/std
+2026-09-16T10:45:14.6689260Z [36;1mgit submodule update --init --recursive --depth=1 -- ./tests/util/std[0m
+2026-09-16T10:45:14.6832260Z shell: /bin/bash --noprofile --norc -e -o pipefail {0}
+2026-09-16T10:45:14.6832590Z env:
+2026-09-16T10:45:14.6832750Z   CARGO_TERM_COLOR: always
+2026-09-16T10:45:14.6833030Z   RUST_BACKTRACE: full
+2026-09-16T10:45:14.6833250Z   RUST_LIB_BACKTRACE: 0
+2026-09-16T10:45:14.6833420Z ##[endgroup]
+2026-09-16T10:45:14.7836970Z Submodule 'tests/util/std' (https://github.com/denoland/deno_std) registered for path 'tests/util/std'
+2026-09-16T10:45:14.7936900Z Cloning into '/Users/runner/work/deno/deno/tests/util/std'...
+2026-09-16T10:45:16.9058640Z From https://github.com/denoland/deno_std
+2026-09-16T10:45:16.9059160Z  * branch            9c5b7101545e53f031b6e7757da655d5d8ee3fc2 -> FETCH_HEAD
+2026-09-16T10:45:17.1535870Z Submodule path 'tests/util/std': checked out '9c5b7101545e53f031b6e7757da655d5d8ee3fc2'
+2026-09-16T10:45:17.1670030Z ##[group]Run curl --version
+2026-09-16T10:45:17.1672250Z [36;1mcurl --version[0m
+2026-09-16T10:45:17.1672440Z [36;1mwhich curl[0m
+2026-09-16T10:45:17.1672660Z [36;1mcat /etc/hosts[0m
+2026-09-16T10:45:17.1672950Z [36;1mrm ~/.curlrc || true[0m
+2026-09-16T10:45:17.1745040Z shell: /bin/bash --noprofile --norc -e -o pipefail {0}
+2026-09-16T10:45:17.1745330Z env:
+2026-09-16T10:45:17.1745490Z   CARGO_TERM_COLOR: always
+2026-09-16T10:45:17.1745680Z   RUST_BACKTRACE: full
+2026-09-16T10:45:17.1745850Z   RUST_LIB_BACKTRACE: 0
+2026-09-16T10:45:17.1746030Z ##[endgroup]
+2026-09-16T10:45:17.2342970Z curl 8.7.1 (x86_64-apple-darwin23.0) libcurl/8.7.1 (SecureTransport) LibreSSL/3.3.6 zlib/1.2.12 nghttp2/1.61.0
+2026-09-16T10:45:17.2345200Z Release-Date: 2024-03-27
+2026-09-16T10:45:17.2345730Z Protocols: dict file ftp ftps gopher gophers http https imap imaps ipfs ipns ldap ldaps mqtt pop3 pop3s rtsp smb smbs smtp smtps telnet tftp
+2026-09-16T10:45:17.2346640Z Features: alt-svc AsynchDNS GSS-API HSTS HTTP2 HTTPS-proxy IPv6 Kerberos Largefile libz MultiSSL NTLM SPNEGO SSL threadsafe UnixSockets
+2026-09-16T10:45:17.2387590Z /usr/bin/curl
+2026-09-16T10:45:17.2419100Z ##
+2026-09-16T10:45:17.2419440Z # Host Database
+2026-09-16T10:45:17.2419790Z #
+2026-09-16T10:45:17.2420170Z # localhost is used to configure the loopback interface
+2026-09-16T10:45:17.2420520Z # when the system is booting.  Do not change this entry.
+2026-09-16T10:45:17.2420760Z ##
+2026-09-16T10:45:17.2420920Z 127.0.0.1	localhost
+2026-09-16T10:45:17.2421080Z 255.255.255.255	broadcasthost
+2026-09-16T10:45:17.2426350Z ::1             localhost
+2026-09-16T10:45:17.2426890Z <PRIVATE_IP> sat12-bq152-a493569c-6b1d-4262-9c22-c43dfd3c90cc-C29C1855BEA3.local sat12-bq152-a493569c-6b1d-4262-9c22-c43dfd3c90cc-C29C1855BEA3
+2026-09-16T10:45:17.2459670Z rm: /Users/runner/.curlrc: No such file or directory
+2026-09-16T10:45:17.2506410Z ##[group]Run echo $GITHUB_WORKSPACE/third_party/prebuilt/mac >> $GITHUB_PATH
+2026-09-16T10:45:17.2506880Z [36;1mecho $GITHUB_WORKSPACE/third_party/prebuilt/mac >> $GITHUB_PATH[0m
+2026-09-16T10:45:17.2563110Z shell: /bin/bash --noprofile --norc -e -o pipefail {0}
+2026-09-16T10:45:17.2563390Z env:
+2026-09-16T10:45:17.2563570Z   CARGO_TERM_COLOR: always
+2026-09-16T10:45:17.2563770Z   RUST_BACKTRACE: full
+2026-09-16T10:45:17.2563970Z   RUST_LIB_BACKTRACE: 0
+2026-09-16T10:45:17.2566260Z   GITHUB_TOKEN: ***
+2026-09-16T10:45:17.2566460Z ##[endgroup]
+2026-09-16T10:45:17.2835910Z ##[group]Run denoland/setup-deno@667a34cdef165d8d2b2e98dde39547c9daac7282
+2026-09-16T10:45:17.2836240Z with:
+2026-09-16T10:45:17.2836400Z   deno-version: v2.x
+2026-09-16T10:45:17.2836590Z   deno-binary-name: deno
+2026-09-16T10:45:17.2836770Z   cache: false
+2026-09-16T10:45:17.2836920Z env:
+2026-09-16T10:45:17.2837070Z   CARGO_TERM_COLOR: always
+2026-09-16T10:45:17.2837260Z   RUST_BACKTRACE: full
+2026-09-16T10:45:17.2837430Z   RUST_LIB_BACKTRACE: 0
+2026-09-16T10:45:17.2837600Z ##[endgroup]
+2026-09-16T10:45:17.6084130Z Going to install stable version 2.9.6.
+2026-09-16T10:45:17.6096750Z Downloading Deno from https://github.com/denoland/deno/releases/download/v2.9.6/deno-aarch64-apple-darwin.zip.
+2026-09-16T10:45:18.0962310Z [command]/usr/bin/unzip -o -q /Users/runner/work/_temp/2a47c0aa-87d0-4a1c-876a-f12e267e0d68
+2026-09-16T10:45:18.9208420Z Cached Deno to /Users/runner/hostedtoolcache/deno/2.9.6/arm64.
+2026-09-16T10:45:18.9254200Z Installation complete.
+2026-09-16T10:45:18.9325300Z ##[group]Run ./tools/install_prebuilt.js ld64.lld
+2026-09-16T10:45:18.9325620Z [36;1m./tools/install_prebuilt.js ld64.lld[0m
+2026-09-16T10:45:18.9404910Z shell: /bin/bash --noprofile --norc -e -o pipefail {0}
+2026-09-16T10:45:18.9405250Z env:
+2026-09-16T10:45:18.9405410Z   CARGO_TERM_COLOR: always
+2026-09-16T10:45:18.9405670Z   RUST_BACKTRACE: full
+2026-09-16T10:45:18.9405870Z   RUST_LIB_BACKTRACE: 0
+2026-09-16T10:45:18.9407900Z   GITHUB_TOKEN: ***
+2026-09-16T10:45:18.9408100Z ##[endgroup]
+2026-09-16T10:45:19.1028340Z Downloading prebuilt tool: ld64.lld
+2026-09-16T10:45:20.3905130Z Checking prebuilt tool: ld64.lld
+2026-09-16T10:45:20.3943550Z Successfully downloaded: ld64.lld
+2026-09-16T10:45:20.4501010Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-09-16T10:45:20.4502640Z ##[group]Run actions/cache/restore@0057852bfaa89a56745cba8c7296529d2fc39830
+2026-09-16T10:45:20.4503040Z with:
+2026-09-16T10:45:20.4503440Z   path: ~/.cargo/.crates.toml
+~/.cargo/.crates2.json
+~/.cargo/bin
+~/.cargo/registry/index
+~/.cargo/registry/cache
+~/.cargo/git/db
+2026-09-16T10:45:20.4503880Z   key: never_saved
+2026-09-16T10:45:20.4504110Z   restore-keys: 124-cargo-home-macos-aarch64-build-main-
+2026-09-16T10:45:20.4504400Z   enableCrossOsArchive: false
+2026-09-16T10:45:20.4504590Z   fail-on-cache-miss: false
+2026-09-16T10:45:20.4504760Z   lookup-only: false
+2026-09-16T10:45:20.4504970Z env:
+2026-09-16T10:45:20.4505350Z   CARGO_TERM_COLOR: always
+2026-09-16T10:45:20.4505570Z   RUST_BACKTRACE: full
+2026-09-16T10:45:20.4505780Z   RUST_LIB_BACKTRACE: 0
+2026-09-16T10:45:20.4505990Z ##[endgroup]
+2026-09-16T10:45:20.6054630Z (node:11981) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-09-16T10:45:20.6056440Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-09-16T10:45:20.8573340Z (node:11981) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-09-16T10:45:20.8578660Z Cache hit for restore-key: 124-cargo-home-macos-aarch64-build-main-685eb3b4b4ffaf2770480b8a99021e8b03292786
+2026-09-16T10:45:22.0051440Z Received 54525952 of 150074499 (36.3%), 52.0 MBs/sec
+2026-09-16T10:45:22.9066840Z Received 150074499 of 150074499 (100.0%), 75.5 MBs/sec
+2026-09-16T10:45:22.9168280Z Cache Size: ~143 MB (150074499 B)
+2026-09-16T10:45:22.9248840Z [command]/opt/homebrew/bin/gtar -xf /Users/runner/work/_temp/0475fe72-f6e6-434f-96fa-5bdc39410681/cache.tzst -P -C /Users/runner/work/deno/deno --delay-directory-restore --use-compress-program unzstd
+2026-09-16T10:45:23.7546540Z Cache restored successfully
+2026-09-16T10:45:23.7849500Z Cache restored from key: 124-cargo-home-macos-aarch64-build-main-685eb3b4b4ffaf2770480b8a99021e8b03292786
+2026-09-16T10:45:23.7992080Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-09-16T10:45:23.7993360Z ##[group]Run actions/cache/restore@0057852bfaa89a56745cba8c7296529d2fc39830
+2026-09-16T10:45:23.7993690Z with:
+2026-09-16T10:45:23.7994020Z   path: ./target
+!./target/*/gn_out
+!./target/*/gn_root
+!./target/*/*.zip
+!./target/*/*.tar.gz
+2026-09-16T10:45:23.7994550Z   key: never_saved
+2026-09-16T10:45:23.7994830Z   restore-keys: 124-cargo-target-macos-aarch64-debug-build-main-
+2026-09-16T10:45:23.7995170Z   enableCrossOsArchive: false
+2026-09-16T10:45:23.7995380Z   fail-on-cache-miss: false
+2026-09-16T10:45:23.7995600Z   lookup-only: false
+2026-09-16T10:45:23.7995790Z env:
+2026-09-16T10:45:23.7995950Z   CARGO_TERM_COLOR: always
+2026-09-16T10:45:23.7996250Z   RUST_BACKTRACE: full
+2026-09-16T10:45:23.7996440Z   RUST_LIB_BACKTRACE: 0
+2026-09-16T10:45:23.7996630Z ##[endgroup]
+2026-09-16T10:45:23.9136000Z (node:12219) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-09-16T10:45:23.9137690Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-09-16T10:45:24.0790080Z (node:12219) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-09-16T10:45:24.1016920Z Cache hit for restore-key: 124-cargo-target-macos-aarch64-debug-build-main-685eb3b4b4ffaf2770480b8a99021e8b03292786
+2026-09-16T10:45:25.2417980Z Received 41943040 of 2086273555 (2.0%), 39.9 MBs/sec
+2026-09-16T10:45:26.2429400Z Received 134217728 of 2086273555 (6.4%), 63.9 MBs/sec
+2026-09-16T10:45:27.2538220Z Received 239075328 of 2086273555 (11.5%), 75.6 MBs/sec
+2026-09-16T10:45:28.2557630Z Received 322961408 of 2086273555 (15.5%), 76.7 MBs/sec
+2026-09-16T10:45:29.2562690Z Received 402653184 of 2086273555 (19.3%), 76.5 MBs/sec
+2026-09-16T10:45:30.2572390Z Received 507510784 of 2086273555 (24.3%), 80.4 MBs/sec
+2026-09-16T10:45:31.2570190Z Received 578813952 of 2086273555 (27.7%), 78.7 MBs/sec
+2026-09-16T10:45:32.2678620Z Received 671088640 of 2086273555 (32.2%), 79.8 MBs/sec
+2026-09-16T10:45:33.2615280Z Received 771751936 of 2086273555 (37.0%), 81.6 MBs/sec
+2026-09-16T10:45:34.2582170Z Received 855638016 of 2086273555 (41.0%), 81.5 MBs/sec
+2026-09-16T10:45:35.2600650Z Received 939524096 of 2086273555 (45.0%), 81.3 MBs/sec
+2026-09-16T10:45:36.2630330Z Received 1023410176 of 2086273555 (49.1%), 81.2 MBs/sec
+2026-09-16T10:45:37.2599770Z Received 1073741824 of 2086273555 (51.5%), 78.6 MBs/sec
+2026-09-16T10:45:38.2600440Z Received 1170210816 of 2086273555 (56.1%), 79.6 MBs/sec
+2026-09-16T10:45:39.2634530Z Received 1228931072 of 2086273555 (58.9%), 78.0 MBs/sec
+2026-09-16T10:45:40.2645050Z Received 1321205760 of 2086273555 (63.3%), 78.6 MBs/sec
+2026-09-16T10:45:41.2632660Z Received 1384120320 of 2086273555 (66.3%), 77.5 MBs/sec
+2026-09-16T10:45:42.3499060Z Received 1476395008 of 2086273555 (70.8%), 77.7 MBs/sec
+2026-09-16T10:45:43.3520460Z Received 1551892480 of 2086273555 (74.4%), 77.4 MBs/sec
+2026-09-16T10:45:44.3529710Z Received 1623195648 of 2086273555 (77.8%), 77.0 MBs/sec
+2026-09-16T10:45:45.3539860Z Received 1715470336 of 2086273555 (82.2%), 77.5 MBs/sec
+2026-09-16T10:45:46.3547190Z Received 1757413376 of 2086273555 (84.2%), 75.8 MBs/sec
+2026-09-16T10:45:47.3561420Z Received 1849688064 of 2086273555 (88.7%), 76.3 MBs/sec
+2026-09-16T10:45:48.3562980Z Received 1900019712 of 2086273555 (91.1%), 75.1 MBs/sec
+2026-09-16T10:45:49.3564680Z Received 1983905792 of 2086273555 (95.1%), 75.3 MBs/sec
+2026-09-16T10:45:50.3570350Z Received 2046820352 of 2086273555 (98.1%), 74.7 MBs/sec
+2026-09-16T10:45:50.8427330Z Received 2086273555 of 2086273555 (100.0%), 74.8 MBs/sec
+2026-09-16T10:45:50.8434420Z Cache Size: ~1990 MB (2086273555 B)
+2026-09-16T10:45:50.9328740Z [command]/opt/homebrew/bin/gtar -xf /Users/runner/work/_temp/c1277ac4-f3e7-4d96-b7a1-98af17cb9388/cache.tzst -P -C /Users/runner/work/deno/deno --delay-directory-restore --use-compress-program unzstd
+2026-09-16T10:46:07.9181730Z Cache restored successfully
+2026-09-16T10:46:08.0366050Z Cache restored from key: 124-cargo-target-macos-aarch64-debug-build-main-685eb3b4b4ffaf2770480b8a99021e8b03292786
+2026-09-16T10:46:08.1092890Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-09-16T10:46:08.1102510Z ##[group]Run ./.github/mtime_cache
+2026-09-16T10:46:08.1103270Z with:
+2026-09-16T10:46:08.1103850Z   cache-path: ./target
+2026-09-16T10:46:08.1104570Z env:
+2026-09-16T10:46:08.1105180Z   CARGO_TERM_COLOR: always
+2026-09-16T10:46:08.1105910Z   RUST_BACKTRACE: full
+2026-09-16T10:46:08.1106650Z   RUST_LIB_BACKTRACE: 0
+2026-09-16T10:46:08.1107350Z ##[endgroup]
+2026-09-16T10:46:13.7998480Z mtime cache statistics
+2026-09-16T10:46:13.7999190Z * restored: 17632
+2026-09-16T10:46:13.8000300Z * added: 11
+2026-09-16T10:46:13.8000560Z * stale: 6
+2026-09-16T10:46:13.8001070Z * invalid: 0
+2026-09-16T10:46:13.8002060Z * cache file: /Users/runner/work/deno/deno/target/.mtime-cache-db.json
+2026-09-16T10:46:13.8011420Z * time spent: 5.539s
+2026-09-16T10:46:13.8130410Z ##[group]Run if command -v rustup >/dev/null 2>&1; then
+2026-09-16T10:46:13.8130970Z [36;1mif command -v rustup >/dev/null 2>&1; then[0m
+2026-09-16T10:46:13.8131560Z [36;1m  if ! rustup --version 2>&1 | grep -q '1\.29\.0'; then exit 0; fi[0m
+2026-09-16T10:46:13.8132390Z [36;1m  echo "Detected broken rustup 1.29.0, replacing with 1.28.2"[0m
+2026-09-16T10:46:13.8132940Z [36;1mfi[0m
+2026-09-16T10:46:13.8133230Z [36;1mcase "${RUNNER_OS}-${RUNNER_ARCH}" in[0m
+2026-09-16T10:46:13.8133620Z [36;1m  Linux-X64)     target=x86_64-unknown-linux-gnu; ext= ;;[0m
+2026-09-16T10:46:13.8134200Z [36;1m  Linux-ARM64)   target=aarch64-unknown-linux-gnu; ext= ;;[0m
+2026-09-16T10:46:13.8134680Z [36;1m  macOS-X64)     target=x86_64-apple-darwin; ext= ;;[0m
+2026-09-16T10:46:13.8135070Z [36;1m  macOS-ARM64)   target=aarch64-apple-darwin; ext= ;;[0m
+2026-09-16T10:46:13.8135530Z [36;1m  Windows-X64)   target=x86_64-pc-windows-msvc; ext=.exe ;;[0m
+2026-09-16T10:46:13.8136240Z [36;1m  Windows-ARM64) target=aarch64-pc-windows-msvc; ext=.exe ;;[0m
+2026-09-16T10:46:13.8136700Z [36;1m  *) echo "Unsupported: ${RUNNER_OS}-${RUNNER_ARCH}"; exit 1 ;;[0m
+2026-09-16T10:46:13.8137280Z [36;1mesac[0m
+2026-09-16T10:46:13.8137760Z [36;1mcurl --proto '=https' --tlsv1.2 --retry 10 --retry-connrefused -fsSL \[0m
+2026-09-16T10:46:13.8138320Z [36;1m  "https://static.rust-lang.org/rustup/archive/1.28.2/${target}/rustup-init${ext}" \[0m
+2026-09-16T10:46:13.8138940Z [36;1m  -o "rustup-init${ext}"[0m
+2026-09-16T10:46:13.8139290Z [36;1mchmod +x "rustup-init${ext}"[0m
+2026-09-16T10:46:13.8139840Z [36;1m"./rustup-init${ext}" -y --default-toolchain none --no-modify-path[0m
+2026-09-16T10:46:13.8140230Z [36;1mrm "rustup-init${ext}"[0m
+2026-09-16T10:46:13.8140650Z [36;1mecho "${CARGO_HOME:-$HOME/.cargo}/bin" >> "$GITHUB_PATH"[0m
+2026-09-16T10:46:13.8504870Z shell: /bin/bash --noprofile --norc -e -o pipefail {0}
+2026-09-16T10:46:13.8506180Z env:
+2026-09-16T10:46:13.8507090Z   CARGO_TERM_COLOR: always
+2026-09-16T10:46:13.8507860Z   RUST_BACKTRACE: full
+2026-09-16T10:46:13.8508530Z   RUST_LIB_BACKTRACE: 0
+2026-09-16T10:46:13.8508850Z ##[endgroup]
+2026-09-16T10:46:26.2827700Z Detected broken rustup 1.29.0, replacing with 1.28.2
+2026-09-16T10:46:26.5981690Z warn: It looks like you have an existing rustup settings file at:
+2026-09-16T10:46:26.5982640Z warn: /Users/runner/.rustup/settings.toml
+2026-09-16T10:46:26.5983250Z warn: Rustup will install the default toolchain as specified in the settings file,
+2026-09-16T10:46:26.5983860Z warn: instead of the one inferred from the default host triple.
+2026-09-16T10:46:26.6380450Z info: profile set to 'default'
+2026-09-16T10:46:26.6380700Z 
+2026-09-16T10:46:26.6380900Z info: default host triple is aarch64-apple-darwin
+2026-09-16T10:46:26.6381300Z info: skipping toolchain installation
+2026-09-16T10:46:26.6381540Z 
+2026-09-16T10:46:26.6381610Z Rust is installed now. Great!
+2026-09-16T10:46:26.6381820Z 
+2026-09-16T10:46:26.6383720Z To get started you need Cargo's bin directory ($HOME/.cargo/bin) in your PATH
+2026-09-16T10:46:26.6384390Z environment variable. This has not been done automatically.
+2026-09-16T10:46:26.6384660Z 
+2026-09-16T10:46:26.6384820Z To configure your current shell, you need to source
+2026-09-16T10:46:26.6385550Z the corresponding env file under $HOME/.cargo.
+2026-09-16T10:46:26.6385850Z 
+2026-09-16T10:46:26.6386100Z This is usually done by running one of the following (note the leading DOT):
+2026-09-16T10:46:26.6386680Z . "$HOME/.cargo/env"            # For sh/bash/zsh/ash/dash/pdksh
+2026-09-16T10:46:26.6387090Z source "$HOME/.cargo/env.fish"  # For fish
+2026-09-16T10:46:26.6387490Z source $"($nu.home-path)/.cargo/env.nu"  # For nushell
+2026-09-16T10:46:26.6726200Z ##[group]Run dsherret/rust-toolchain-file@3551321aa44dd44a0393eb3b6bdfbc5d25ecf621
+2026-09-16T10:46:26.6729280Z env:
+2026-09-16T10:46:26.6730270Z   CARGO_TERM_COLOR: always
+2026-09-16T10:46:26.6731510Z   RUST_BACKTRACE: full
+2026-09-16T10:46:26.6734720Z   RUST_LIB_BACKTRACE: 0
+2026-09-16T10:46:26.6735440Z ##[endgroup]
+2026-09-16T10:46:26.6924070Z ##[start-action display=Run if [[ -f "rust-toolchain" || -f "rust-toolchain.toml" %5D%5D;id=__dsherret_rust-toolchain-file.ensure-toolchain-file]
+2026-09-16T10:46:26.7080150Z ##[group]Run if [[ -f "rust-toolchain" || -f "rust-toolchain.toml" ]]
+2026-09-16T10:46:26.7080810Z [36;1mif [[ -f "rust-toolchain" || -f "rust-toolchain.toml" ]][0m
+2026-09-16T10:46:26.7081100Z [36;1mthen[0m
+2026-09-16T10:46:26.7081370Z [36;1m  echo "Found toolchain file"[0m
+2026-09-16T10:46:26.7081720Z [36;1melse[0m
+2026-09-16T10:46:26.7082100Z [36;1m  echo "No rust-toolchain or rust-toolchain.toml file found in repo."[0m
+2026-09-16T10:46:26.7082830Z [36;1m  echo "Please ensure the repo is checked out first or add this file."[0m
+2026-09-16T10:46:26.7083420Z [36;1m  echo "If you don't want this file, then please use https://github.com/dtolnay/rust-toolchain"[0m
+2026-09-16T10:46:26.7084030Z [36;1m  exit 1[0m
+2026-09-16T10:46:26.7084400Z [36;1mfi[0m
+2026-09-16T10:46:26.7174420Z shell: /bin/bash --noprofile --norc -e -o pipefail {0}
+2026-09-16T10:46:26.7174840Z env:
+2026-09-16T10:46:26.7175080Z   CARGO_TERM_COLOR: always
+2026-09-16T10:46:26.7175390Z   RUST_BACKTRACE: full
+2026-09-16T10:46:26.7175720Z   RUST_LIB_BACKTRACE: 0
+2026-09-16T10:46:26.7176040Z ##[endgroup]
+2026-09-16T10:46:26.8007570Z Found toolchain file
+2026-09-16T10:46:26.8044660Z ##[end-action id=__dsherret_rust-toolchain-file.ensure-toolchain-file;outcome=success;conclusion=success;duration_ms=111]
+2026-09-16T10:46:26.8060370Z ##[start-action display=Run : install rustup if needed;id=__dsherret_rust-toolchain-file.__run]
+2026-09-16T10:46:26.8087970Z ##[group]Run : install rustup if needed
+2026-09-16T10:46:26.8088380Z [36;1m: install rustup if needed[0m
+2026-09-16T10:46:26.8088690Z [36;1mif ! command -v rustup &>/dev/null; then[0m
+2026-09-16T10:46:26.8089320Z [36;1m  curl --proto '=https' --tlsv1.2 --retry 10 --retry-connrefused -fsSL "https://sh.rustup.rs" | sh -s -- --default-toolchain none -y[0m
+2026-09-16T10:46:26.8089930Z [36;1m  source "${CARGO_HOME:-$HOME/.cargo}/env"[0m
+2026-09-16T10:46:26.8090260Z [36;1m  echo "${CARGO_HOME:-$HOME/.cargo}/bin" >> $GITHUB_PATH[0m
+2026-09-16T10:46:26.8090630Z [36;1m  rustup show active-toolchain || rustup toolchain install[0m
+2026-09-16T10:46:26.8090930Z [36;1mfi[0m
+2026-09-16T10:46:26.8199960Z shell: /bin/bash --noprofile --norc -e -o pipefail {0}
+2026-09-16T10:46:26.8200790Z env:
+2026-09-16T10:46:26.8201240Z   CARGO_TERM_COLOR: always
+2026-09-16T10:46:26.8201860Z   RUST_BACKTRACE: full
+2026-09-16T10:46:26.8202370Z   RUST_LIB_BACKTRACE: 0
+2026-09-16T10:46:26.8203060Z ##[endgroup]
+2026-09-16T10:46:26.9179780Z ##[end-action id=__dsherret_rust-toolchain-file.__run;outcome=success;conclusion=success;duration_ms=111]
+2026-09-16T10:46:26.9185330Z ##[start-action display=create cache key;id=__dsherret_rust-toolchain-file.rustc-version]
+2026-09-16T10:46:26.9206670Z ##[group]Run : create cachekey
+2026-09-16T10:46:26.9206970Z [36;1m: create cachekey[0m
+2026-09-16T10:46:26.9207470Z [36;1mDATE=$(rustc --version --verbose | sed -ne 's/^commit-date: \(20[0-9][0-9]\)-\([01][0-9]\)-\([0-3][0-9]\)$/\1\2\3/p')[0m
+2026-09-16T10:46:26.9208000Z [36;1mHASH=$(rustc --version --verbose | sed -ne 's/^commit-hash: //p')[0m
+2026-09-16T10:46:26.9208440Z [36;1mecho "cachekey=$(echo $DATE$HASH | head -c12)" >> $GITHUB_OUTPUT[0m
+2026-09-16T10:46:26.9299620Z shell: /bin/bash --noprofile --norc -e -o pipefail {0}
+2026-09-16T10:46:26.9300420Z env:
+2026-09-16T10:46:26.9300880Z   CARGO_TERM_COLOR: always
+2026-09-16T10:46:26.9301440Z   RUST_BACKTRACE: full
+2026-09-16T10:46:26.9301940Z   RUST_LIB_BACKTRACE: 0
+2026-09-16T10:46:26.9302480Z ##[endgroup]
+2026-09-16T10:46:27.1826860Z ##[end-action id=__dsherret_rust-toolchain-file.rustc-version;outcome=success;conclusion=success;duration_ms=263]
+2026-09-16T10:46:27.1843170Z ##[start-action display=Run : disable incremental compilation;id=__dsherret_rust-toolchain-file.__run_2]
+2026-09-16T10:46:27.1905980Z ##[group]Run : disable incremental compilation
+2026-09-16T10:46:27.1907080Z [36;1m: disable incremental compilation[0m
+2026-09-16T10:46:27.1907810Z [36;1mif [ -z "${CARGO_INCREMENTAL+set}" ]; then[0m
+2026-09-16T10:46:27.1908550Z [36;1m  echo CARGO_INCREMENTAL=0 >> $GITHUB_ENV[0m
+2026-09-16T10:46:27.1909180Z [36;1mfi[0m
+2026-09-16T10:46:27.2042650Z shell: /bin/bash --noprofile --norc -e -o pipefail {0}
+2026-09-16T10:46:27.2043390Z env:
+2026-09-16T10:46:27.2043820Z   CARGO_TERM_COLOR: always
+2026-09-16T10:46:27.2044360Z   RUST_BACKTRACE: full
+2026-09-16T10:46:27.2044850Z   RUST_LIB_BACKTRACE: 0
+2026-09-16T10:46:27.2045370Z ##[endgroup]
+2026-09-16T10:46:27.2525680Z ##[end-action id=__dsherret_rust-toolchain-file.__run_2;outcome=success;conclusion=success;duration_ms=68]
+2026-09-16T10:46:27.2532330Z ##[start-action display=Run : enable colors in Cargo output;id=__dsherret_rust-toolchain-file.__run_3]
+2026-09-16T10:46:27.2571500Z ##[group]Run : enable colors in Cargo output
+2026-09-16T10:46:27.2571850Z [36;1m: enable colors in Cargo output[0m
+2026-09-16T10:46:27.2572230Z [36;1mif [ -z "${CARGO_TERM_COLOR+set}" ]; then[0m
+2026-09-16T10:46:27.2572630Z [36;1m  echo CARGO_TERM_COLOR=always >> $GITHUB_ENV[0m
+2026-09-16T10:46:27.2572930Z [36;1mfi[0m
+2026-09-16T10:46:27.2753910Z shell: /bin/bash --noprofile --norc -e -o pipefail {0}
+2026-09-16T10:46:27.2754360Z env:
+2026-09-16T10:46:27.2754580Z   CARGO_TERM_COLOR: always
+2026-09-16T10:46:27.2754850Z   RUST_BACKTRACE: full
+2026-09-16T10:46:27.2755060Z   RUST_LIB_BACKTRACE: 0
+2026-09-16T10:46:27.2755270Z   CARGO_INCREMENTAL: 0
+2026-09-16T10:46:27.2755520Z ##[endgroup]
+2026-09-16T10:46:27.3623040Z ##[end-action id=__dsherret_rust-toolchain-file.__run_3;outcome=success;conclusion=success;duration_ms=108]
+2026-09-16T10:46:27.3686330Z ##[start-action display=Run : enable Cargo sparse registry;id=__dsherret_rust-toolchain-file.__run_4]
+2026-09-16T10:46:27.3722260Z ##[group]Run : enable Cargo sparse registry
+2026-09-16T10:46:27.3722640Z [36;1m: enable Cargo sparse registry[0m
+2026-09-16T10:46:27.3723070Z [36;1m# except on 1.66 and 1.67, on which it is unstable[0m
+2026-09-16T10:46:27.3723750Z [36;1mif [ -z "${CARGO_REGISTRIES_CRATES_IO_PROTOCOL+set}" -o -f "/Users/runner/work/_temp"/.implicit_cargo_registries_crates_io_protocol ]; then[0m
+2026-09-16T10:46:27.3724440Z [36;1m  touch "/Users/runner/work/_temp"/.implicit_cargo_registries_crates_io_protocol || true[0m
+2026-09-16T10:46:27.3724930Z [36;1m  if rustc --version --verbose | (! grep -q '^release: 1\.6[67]\.'); then[0m
+2026-09-16T10:46:27.3725370Z [36;1m    echo CARGO_REGISTRIES_CRATES_IO_PROTOCOL=sparse >> $GITHUB_ENV[0m
+2026-09-16T10:46:27.3725710Z [36;1m  else[0m
+2026-09-16T10:46:27.3726010Z [36;1m    echo CARGO_REGISTRIES_CRATES_IO_PROTOCOL=git >> $GITHUB_ENV[0m
+2026-09-16T10:46:27.3726970Z [36;1m  fi[0m
+2026-09-16T10:46:27.3727190Z [36;1mfi[0m
+2026-09-16T10:46:27.3870690Z shell: /bin/bash --noprofile --norc -e -o pipefail {0}
+2026-09-16T10:46:27.3871420Z env:
+2026-09-16T10:46:27.3871860Z   CARGO_TERM_COLOR: always
+2026-09-16T10:46:27.3872440Z   RUST_BACKTRACE: full
+2026-09-16T10:46:27.3872970Z   RUST_LIB_BACKTRACE: 0
+2026-09-16T10:46:27.3873470Z   CARGO_INCREMENTAL: 0
+2026-09-16T10:46:27.3873980Z ##[endgroup]
+2026-09-16T10:46:27.4932890Z ##[end-action id=__dsherret_rust-toolchain-file.__run_4;outcome=success;conclusion=success;duration_ms=124]
+2026-09-16T10:46:27.4936110Z ##[start-action display=Run rustc --version --verbose;id=__dsherret_rust-toolchain-file.__run_5]
+2026-09-16T10:46:27.4968680Z ##[group]Run rustc --version --verbose
+2026-09-16T10:46:27.4969600Z [36;1mrustc --version --verbose[0m
+2026-09-16T10:46:27.5046580Z shell: /bin/bash --noprofile --norc -e -o pipefail {0}
+2026-09-16T10:46:27.5046900Z env:
+2026-09-16T10:46:27.5047390Z   CARGO_TERM_COLOR: always
+2026-09-16T10:46:27.5047600Z   RUST_BACKTRACE: full
+2026-09-16T10:46:27.5047800Z   RUST_LIB_BACKTRACE: 0
+2026-09-16T10:46:27.5048020Z   CARGO_INCREMENTAL: 0
+2026-09-16T10:46:27.5048230Z   CARGO_REGISTRIES_CRATES_IO_PROTOCOL: sparse
+2026-09-16T10:46:27.5048740Z ##[endgroup]
+2026-09-16T10:46:27.6036990Z rustc 1.95.0 (59807616e 2026-04-14)
+2026-09-16T10:46:27.6037480Z binary: rustc
+2026-09-16T10:46:27.6037760Z commit-hash: 59807616e1fa2540724bfbac14d7976d7e4a3860
+2026-09-16T10:46:27.6038120Z commit-date: 2026-04-14
+2026-09-16T10:46:27.6038440Z host: aarch64-apple-darwin
+2026-09-16T10:46:27.6038750Z release: 1.95.0
+2026-09-16T10:46:27.6043020Z LLVM version: 22.1.2
+2026-09-16T10:46:27.6058140Z ##[end-action id=__dsherret_rust-toolchain-file.__run_5;outcome=success;conclusion=success;duration_ms=112]
+2026-09-16T10:46:27.6117420Z ##[group]Run echo '*** Python'
+2026-09-16T10:46:27.6117800Z [36;1mecho '*** Python'[0m
+2026-09-16T10:46:27.6118190Z [36;1mcommand -v python && python --version || echo 'No python found or bad executable'[0m
+2026-09-16T10:46:27.6118640Z [36;1mecho '*** Rust'[0m
+2026-09-16T10:46:27.6118970Z [36;1mcommand -v rustc && rustc --version || echo 'No rustc found or bad executable'[0m
+2026-09-16T10:46:27.6119350Z [36;1mecho '*** Cargo'[0m
+2026-09-16T10:46:27.6119720Z [36;1mcommand -v cargo && cargo --version || echo 'No cargo found or bad executable'[0m
+2026-09-16T10:46:27.6120080Z [36;1mecho '*** Deno'[0m
+2026-09-16T10:46:27.6120410Z [36;1mcommand -v deno && deno --version || echo 'No deno found or bad executable'[0m
+2026-09-16T10:46:27.6120760Z [36;1mecho '*** Node'[0m
+2026-09-16T10:46:27.6121050Z [36;1mcommand -v node && node --version || echo 'No node found or bad executable'[0m
+2026-09-16T10:46:27.6121400Z [36;1mecho '*** Installed packages'[0m
+2026-09-16T10:46:27.6121810Z [36;1mcommand -v dpkg && dpkg -l || echo 'No dpkg found or bad executable'[0m
+2026-09-16T10:46:27.6185200Z shell: /bin/bash --noprofile --norc -e -o pipefail {0}
+2026-09-16T10:46:27.6185510Z env:
+2026-09-16T10:46:27.6185710Z   CARGO_TERM_COLOR: always
+2026-09-16T10:46:27.6185920Z   RUST_BACKTRACE: full
+2026-09-16T10:46:27.6186090Z   RUST_LIB_BACKTRACE: 0
+2026-09-16T10:46:27.6186290Z   CARGO_INCREMENTAL: 0
+2026-09-16T10:46:27.6186550Z   CARGO_REGISTRIES_CRATES_IO_PROTOCOL: sparse
+2026-09-16T10:46:27.6186850Z ##[endgroup]
+2026-09-16T10:46:27.6631170Z *** Python
+2026-09-16T10:46:27.6631820Z /Library/Frameworks/Python.framework/Versions/Current/bin/python
+2026-09-16T10:46:27.8123700Z Python 3.14.7
+2026-09-16T10:46:27.8125850Z *** Rust
+2026-09-16T10:46:27.8126800Z /Users/runner/.cargo/bin/rustc
+2026-09-16T10:46:27.8866790Z rustc 1.95.0 (59807616e 2026-04-14)
+2026-09-16T10:46:27.8873840Z *** Cargo
+2026-09-16T10:46:27.8874270Z /Users/runner/.cargo/bin/cargo
+2026-09-16T10:46:27.9624650Z cargo 1.95.0 (f2d3ce0bd 2026-03-21)
+2026-09-16T10:46:27.9627520Z *** Deno
+2026-09-16T10:46:27.9628580Z /Users/runner/hostedtoolcache/deno/2.9.6/arm64/deno
+2026-09-16T10:46:28.0252430Z deno 2.9.6 (stable, release, aarch64-apple-darwin)
+2026-09-16T10:46:28.0352890Z v8 15.0.245.2-rusty
+2026-09-16T10:46:28.0460560Z typescript 6.0.3
+2026-09-16T10:46:28.0561130Z *** Node
+2026-09-16T10:46:28.0568120Z /opt/homebrew/bin/node
+2026-09-16T10:46:28.3404460Z v22.23.2
+2026-09-16T10:46:28.3447250Z *** Installed packages
+2026-09-16T10:46:28.3524710Z No dpkg found or bad executable
+2026-09-16T10:46:28.3575370Z ##[group]Run cargo build --locked -p deno -p denort -p test_server --bin deno --bin denort --bin test_server --features=deno/panic-trace
+2026-09-16T10:46:28.3577580Z [36;1mcargo build --locked -p deno -p denort -p test_server --bin deno --bin denort --bin test_server --features=deno/panic-trace[0m
+2026-09-16T10:46:28.3686230Z shell: /bin/bash --noprofile --norc -e -o pipefail {0}
+2026-09-16T10:46:28.3686530Z env:
+2026-09-16T10:46:28.3686720Z   CARGO_TERM_COLOR: always
+2026-09-16T10:46:28.3686980Z   RUST_BACKTRACE: full
+2026-09-16T10:46:28.3687200Z   RUST_LIB_BACKTRACE: 0
+2026-09-16T10:46:28.3687500Z   CARGO_INCREMENTAL: 0
+2026-09-16T10:46:28.3687720Z   CARGO_REGISTRIES_CRATES_IO_PROTOCOL: sparse
+2026-09-16T10:46:28.3687970Z   CARGO_PROFILE_DEV_DEBUG: 0
+2026-09-16T10:46:28.3688220Z ##[endgroup]
+2026-09-16T10:46:28.5073220Z [1m[33mwarning[0m: /Users/runner/work/deno/deno/Cargo.toml: `panic` setting is ignored for `bench` profile
+2026-09-16T10:46:49.6427230Z [1m[92m   Compiling[0m deno_node v0.196.0 (/Users/runner/work/deno/deno/ext/node)
+2026-09-16T10:47:01.9864100Z [1m[92m   Compiling[0m deno_napi v0.189.0 (/Users/runner/work/deno/deno/ext/napi)
+2026-09-16T10:47:06.9435010Z [1m[92m   Compiling[0m deno_runtime v0.266.0 (/Users/runner/work/deno/deno/runtime)
+2026-09-16T10:47:10.9953800Z [1m[92m   Compiling[0m deno_lib v0.76.0 (/Users/runner/work/deno/deno/cli/lib)
+2026-09-16T10:47:11.9863370Z [1m[91merror[E0308][0m[1m: `match` arms have incompatible types[0m
+2026-09-16T10:47:11.9935270Z ##[error]  [1m[94m--> [0mcli/lib/loader.rs:35:41
+2026-09-16T10:47:12.0041130Z    [1m[94m|[0m
+2026-09-16T10:47:12.0041890Z [1m[94m31[0m [1m[94m|[0m [1m[94m/[0m   match requested_module_type {
+2026-09-16T10:47:12.0044500Z [1m[94m32[0m [1m[94m|[0m [1m[94m|[0m     RequestedModuleType::Json => "json".to_string(),
+2026-09-16T10:47:12.0166480Z    [1m[94m|[0m [1m[94m|[0m                                  [1m[94m------------------[0m [1m[94mthis is found to be of type `std::string::String`[0m
+2026-09-16T10:47:12.0269960Z [1m[94m33[0m [1m[94m|[0m [1m[94m|[0m     RequestedModuleType::Text => "text".to_string(),
+2026-09-16T10:47:12.0324510Z    [1m[94m|[0m [1m[94m|[0m                                  [1m[94m------------------[0m [1m[94mthis is found to be of type `std::string::String`[0m
+2026-09-16T10:47:12.0325730Z [1m[94m34[0m [1m[94m|[0m [1m[94m|[0m     RequestedModuleType::Bytes => "bytes".to_string(),
+2026-09-16T10:47:12.0327040Z    [1m[94m|[0m [1m[94m|[0m                                   [1m[94m-------------------[0m [1m[94mthis is found to be of type `std::string::String`[0m
+2026-09-16T10:47:12.0428710Z [1m[94m35[0m [1m[94m|[0m [1m[94m|[0m     RequestedModuleType::Other(kind) => kind.clone(),
+2026-09-16T10:47:12.0530640Z    [1m[94m|[0m [1m[94m|[0m                                         [1m[91m^^^^^^^^^^^^[0m [1m[91mexpected `String`, found `Cow<'_, str>`[0m
+2026-09-16T10:47:12.0632530Z [1m[94m36[0m [1m[94m|[0m [1m[94m|[0m     RequestedModuleType::None => "module".to_string(),
+2026-09-16T10:47:12.0721690Z [1m[94m37[0m [1m[94m|[0m [1m[94m|[0m   }
+2026-09-16T10:47:12.0722430Z    [1m[94m|[0m [1m[94m|___-[0m [1m[94m`match` arms have incompatible types[0m
+2026-09-16T10:47:12.0723690Z    [1m[94m|[0m
+2026-09-16T10:47:12.0789970Z    [1m[94m= [0m[1mnote[0m: expected struct `[1m[35mstd::string::String[0m`
+2026-09-16T10:47:12.0790650Z                 found enum `[1m[35mCow<'_, str>[0m`
+2026-09-16T10:47:12.0791360Z [1m[96mhelp[0m: try using a conversion method
+2026-09-16T10:47:12.0860670Z    [1m[94m|[0m
+2026-09-16T10:47:12.0861350Z [1m[94m35[0m [91m- [0m    RequestedModuleType::Other(kind) => kind.[91mclone[0m(),
+2026-09-16T10:47:12.0862290Z [1m[94m35[0m [92m+ [0m    RequestedModuleType::Other(kind) => kind.[92mto_string[0m(),
+2026-09-16T10:47:12.0862850Z    [1m[94m|[0m
+2026-09-16T10:47:12.0863160Z 
+2026-09-16T10:47:12.3692450Z [1mFor more information about this error, try `rustc --explain E0308`.[0m
+2026-09-16T10:47:12.3793130Z [1m[91merror[0m: could not compile `deno_lib` (lib) due to 1 previous error
+2026-09-16T10:47:12.3914460Z [1m[33mwarning[0m: build failed, waiting for other jobs to finish...
+2026-09-16T10:47:13.5051580Z ##[error]Process completed with exit code 101.
+2026-09-16T10:47:13.5221050Z Post job cleanup.
+2026-09-16T10:47:13.8514150Z Caching is not enabled. Caching is skipped.
+2026-09-16T10:47:13.8631710Z Post job cleanup.
+2026-09-16T10:47:13.9412900Z [command]/opt/homebrew/bin/git version
+2026-09-16T10:47:13.9911040Z git version 2.55.0
+2026-09-16T10:47:13.9935780Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/a7ee45c8-2691-4ddc-87ab-322a1727f044/.gitconfig'
+2026-09-16T10:47:13.9941860Z Temporarily overriding HOME='/Users/runner/work/_temp/a7ee45c8-2691-4ddc-87ab-322a1727f044' before making global git config changes
+2026-09-16T10:47:13.9948810Z Adding repository directory to the temporary git global config as a safe directory
+2026-09-16T10:47:13.9949360Z [command]/opt/homebrew/bin/git config --global --add safe.directory /Users/runner/work/deno/deno
+2026-09-16T10:47:14.0021370Z Removing SSH command configuration
+2026-09-16T10:47:14.0025620Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-16T10:47:14.0069340Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-16T10:47:14.1173560Z Entering 'tests/util/std'
+2026-09-16T10:47:14.1331920Z Removing HTTP extra header
+2026-09-16T10:47:14.1335580Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-16T10:47:14.1376150Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-16T10:47:14.1860100Z Entering 'tests/util/std'
+2026-09-16T10:47:14.2001840Z Removing includeIf entries pointing to credentials config files
+2026-09-16T10:47:14.2006490Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-09-16T10:47:14.2044370Z includeif.gitdir:/Users/runner/work/deno/deno/.git.path
+2026-09-16T10:47:14.2044880Z includeif.gitdir:/Users/runner/work/deno/deno/.git/worktrees/*.path
+2026-09-16T10:47:14.2045300Z includeif.gitdir:/github/workspace/.git.path
+2026-09-16T10:47:14.2045670Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-09-16T10:47:14.2049900Z [command]/opt/homebrew/bin/git config --local --get-all includeif.gitdir:/Users/runner/work/deno/deno/.git.path
+2026-09-16T10:47:14.2084410Z /Users/runner/work/_temp/git-credentials-9317e717-f963-4bfd-ac99-aae40172e639.config
+2026-09-16T10:47:14.2092030Z [command]/opt/homebrew/bin/git config --local --unset includeif.gitdir:/Users/runner/work/deno/deno/.git.path /Users/runner/work/_temp/git-credentials-9317e717-f963-4bfd-ac99-aae40172e639.config
+2026-09-16T10:47:14.2153350Z [command]/opt/homebrew/bin/git config --local --get-all includeif.gitdir:/Users/runner/work/deno/deno/.git/worktrees/*.path
+2026-09-16T10:47:14.2192380Z /Users/runner/work/_temp/git-credentials-9317e717-f963-4bfd-ac99-aae40172e639.config
+2026-09-16T10:47:14.2197940Z [command]/opt/homebrew/bin/git config --local --unset includeif.gitdir:/Users/runner/work/deno/deno/.git/worktrees/*.path /Users/runner/work/_temp/git-credentials-9317e717-f963-4bfd-ac99-aae40172e639.config
+2026-09-16T10:47:14.2240500Z [command]/opt/homebrew/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-09-16T10:47:14.2273030Z /github/runner_temp/git-credentials-9317e717-f963-4bfd-ac99-aae40172e639.config
+2026-09-16T10:47:14.2278150Z [command]/opt/homebrew/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-9317e717-f963-4bfd-ac99-aae40172e639.config
+2026-09-16T10:47:14.2315490Z [command]/opt/homebrew/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-09-16T10:47:14.2346810Z /github/runner_temp/git-credentials-9317e717-f963-4bfd-ac99-aae40172e639.config
+2026-09-16T10:47:14.2353400Z [command]/opt/homebrew/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-9317e717-f963-4bfd-ac99-aae40172e639.config
+2026-09-16T10:47:14.2392410Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-09-16T10:47:14.2868110Z Entering 'tests/util/std'
+2026-09-16T10:47:14.2922020Z file:/Users/runner/work/deno/deno/.git/modules/tests/util/std/config	remote.origin.url
+2026-09-16T10:47:14.2968400Z [command]/opt/homebrew/bin/git config --file /Users/runner/work/deno/deno/.git/modules/tests/util/std/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-09-16T10:47:14.3000030Z Removing credentials config '/Users/runner/work/_temp/git-credentials-9317e717-f963-4bfd-ac99-aae40172e639.config'
+2026-09-16T10:47:14.3089190Z Cleaning up orphan processes
+2026-09-16T10:47:14.7213700Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: ./.github/mtime_cache, actions/cache/restore@0057852bfaa89a56745cba8c7296529d2fc39830. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

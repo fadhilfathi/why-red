@@ -1,0 +1,7 @@
+{
+  "failure_class": "COMPILATION_ERROR",
+  "evidence_lines": [603],
+  "job_id": 104762914616,
+  "notes": "rustc error[E0308]: match arms have incompatible types, in deno's own Rust codebase. Classic compiler error before any test runs.",
+  "ambiguous_with": null
+}

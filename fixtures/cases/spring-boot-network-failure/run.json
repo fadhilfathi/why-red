@@ -1,0 +1,629 @@
+{
+  "id": 33870500493,
+  "repo": "spring-projects/spring-boot",
+  "workflow_name": "CI",
+  "run_number": 8370,
+  "run_attempt": 1,
+  "event": "push",
+  "head_branch": "4.0.x",
+  "head_sha": "3d731beaa1e94ea80f5f284c7c8c53d713bbc118",
+  "status": "completed",
+  "conclusion": "failure",
+  "created_at": "2026-09-04T11:59:05Z",
+  "updated_at": "2026-09-04T13:33:50Z",
+  "html_url": "https://github.com/spring-projects/spring-boot/actions/runs/33870500493",
+  "jobs": [
+    {
+      "id": 101015071652,
+      "name": "Linux | Java 21",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-09-04T11:59:07Z",
+      "completed_at": "2026-09-04T13:25:28Z",
+      "runner_name": "GitHub Actions 1008632858",
+      "html_url": "https://github.com/spring-projects/spring-boot/actions/runs/33870500493/job/101015071652",
+      "steps": [
+        {
+          "number": 1,
+          "name": "Set up job",
+          "conclusion": "success",
+          "started_at": "2026-09-04T11:59:08Z",
+          "completed_at": "2026-09-04T11:59:09Z"
+        },
+        {
+          "number": 2,
+          "name": "Prepare Windows runner",
+          "conclusion": "skipped",
+          "started_at": "2026-09-04T11:59:09Z",
+          "completed_at": "2026-09-04T11:59:09Z"
+        },
+        {
+          "number": 3,
+          "name": "Check Out Code",
+          "conclusion": "success",
+          "started_at": "2026-09-04T11:59:09Z",
+          "completed_at": "2026-09-04T11:59:13Z"
+        },
+        {
+          "number": 4,
+          "name": "Build",
+          "conclusion": "success",
+          "started_at": "2026-09-04T11:59:13Z",
+          "completed_at": "2026-09-04T13:25:24Z"
+        },
+        {
+          "number": 5,
+          "name": "Send Notification",
+          "conclusion": "success",
+          "started_at": "2026-09-04T13:25:24Z",
+          "completed_at": "2026-09-04T13:25:24Z"
+        },
+        {
+          "number": 9,
+          "name": "Post Build",
+          "conclusion": "success",
+          "started_at": "2026-09-04T13:25:24Z",
+          "completed_at": "2026-09-04T13:25:25Z"
+        },
+        {
+          "number": 10,
+          "name": "Post Check Out Code",
+          "conclusion": "success",
+          "started_at": "2026-09-04T13:25:25Z",
+          "completed_at": "2026-09-04T13:25:26Z"
+        },
+        {
+          "number": 11,
+          "name": "Complete job",
+          "conclusion": "success",
+          "started_at": "2026-09-04T13:25:26Z",
+          "completed_at": "2026-09-04T13:25:26Z"
+        }
+      ]
+    },
+    {
+      "id": 101015071844,
+      "name": "Windows | Java 26",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-09-04T11:59:07Z",
+      "completed_at": "2026-09-04T13:02:36Z",
+      "runner_name": "GitHub Actions 1008632859",
+      "html_url": "https://github.com/spring-projects/spring-boot/actions/runs/33870500493/job/101015071844",
+      "steps": [
+        {
+          "number": 1,
+          "name": "Set up job",
+          "conclusion": "success",
+          "started_at": "2026-09-04T11:59:08Z",
+          "completed_at": "2026-09-04T11:59:08Z"
+        },
+        {
+          "number": 2,
+          "name": "Prepare Windows runner",
+          "conclusion": "success",
+          "started_at": "2026-09-04T11:59:08Z",
+          "completed_at": "2026-09-04T11:59:12Z"
+        },
+        {
+          "number": 3,
+          "name": "Check Out Code",
+          "conclusion": "success",
+          "started_at": "2026-09-04T11:59:12Z",
+          "completed_at": "2026-09-04T11:59:21Z"
+        },
+        {
+          "number": 4,
+          "name": "Build",
+          "conclusion": "success",
+          "started_at": "2026-09-04T11:59:21Z",
+          "completed_at": "2026-09-04T13:02:29Z"
+        },
+        {
+          "number": 5,
+          "name": "Send Notification",
+          "conclusion": "success",
+          "started_at": "2026-09-04T13:02:29Z",
+          "completed_at": "2026-09-04T13:02:30Z"
+        },
+        {
+          "number": 9,
+          "name": "Post Build",
+          "conclusion": "success",
+          "started_at": "2026-09-04T13:02:30Z",
+          "completed_at": "2026-09-04T13:02:32Z"
+        },
+        {
+          "number": 10,
+          "name": "Post Check Out Code",
+          "conclusion": "success",
+          "started_at": "2026-09-04T13:02:32Z",
+          "completed_at": "2026-09-04T13:02:34Z"
+        },
+        {
+          "number": 11,
+          "name": "Complete job",
+          "conclusion": "success",
+          "started_at": "2026-09-04T13:02:34Z",
+          "completed_at": "2026-09-04T13:02:34Z"
+        }
+      ]
+    },
+    {
+      "id": 101015071943,
+      "name": "Windows | Java 27",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-09-04T11:59:08Z",
+      "completed_at": "2026-09-04T13:06:09Z",
+      "runner_name": "GitHub Actions 1008632871",
+      "html_url": "https://github.com/spring-projects/spring-boot/actions/runs/33870500493/job/101015071943",
+      "steps": [
+        {
+          "number": 1,
+          "name": "Set up job",
+          "conclusion": "success",
+          "started_at": "2026-09-04T11:59:09Z",
+          "completed_at": "2026-09-04T11:59:09Z"
+        },
+        {
+          "number": 2,
+          "name": "Prepare Windows runner",
+          "conclusion": "success",
+          "started_at": "2026-09-04T11:59:09Z",
+          "completed_at": "2026-09-04T11:59:12Z"
+        },
+        {
+          "number": 3,
+          "name": "Check Out Code",
+          "conclusion": "success",
+          "started_at": "2026-09-04T11:59:12Z",
+          "completed_at": "2026-09-04T11:59:20Z"
+        },
+        {
+          "number": 4,
+          "name": "Build",
+          "conclusion": "success",
+          "started_at": "2026-09-04T11:59:20Z",
+          "completed_at": "2026-09-04T13:06:02Z"
+        },
+        {
+          "number": 5,
+          "name": "Send Notification",
+          "conclusion": "success",
+          "started_at": "2026-09-04T13:06:02Z",
+          "completed_at": "2026-09-04T13:06:04Z"
+        },
+        {
+          "number": 9,
+          "name": "Post Build",
+          "conclusion": "success",
+          "started_at": "2026-09-04T13:06:04Z",
+          "completed_at": "2026-09-04T13:06:05Z"
+        },
+        {
+          "number": 10,
+          "name": "Post Check Out Code",
+          "conclusion": "success",
+          "started_at": "2026-09-04T13:06:05Z",
+          "completed_at": "2026-09-04T13:06:08Z"
+        },
+        {
+          "number": 11,
+          "name": "Complete job",
+          "conclusion": "success",
+          "started_at": "2026-09-04T13:06:08Z",
+          "completed_at": "2026-09-04T13:06:08Z"
+        }
+      ]
+    },
+    {
+      "id": 101015071945,
+      "name": "Windows | Java 21",
+      "status": "completed",
+      "conclusion": "failure",
+      "started_at": "2026-09-04T11:59:07Z",
+      "completed_at": "2026-09-04T12:34:26Z",
+      "runner_name": "GitHub Actions 1008632873",
+      "html_url": "https://github.com/spring-projects/spring-boot/actions/runs/33870500493/job/101015071945",
+      "steps": [
+        {
+          "number": 1,
+          "name": "Set up job",
+          "conclusion": "success",
+          "started_at": "2026-09-04T11:59:08Z",
+          "completed_at": "2026-09-04T11:59:09Z"
+        },
+        {
+          "number": 2,
+          "name": "Prepare Windows runner",
+          "conclusion": "success",
+          "started_at": "2026-09-04T11:59:09Z",
+          "completed_at": "2026-09-04T11:59:12Z"
+        },
+        {
+          "number": 3,
+          "name": "Check Out Code",
+          "conclusion": "success",
+          "started_at": "2026-09-04T11:59:12Z",
+          "completed_at": "2026-09-04T11:59:23Z"
+        },
+        {
+          "number": 4,
+          "name": "Build",
+          "conclusion": "failure",
+          "started_at": "2026-09-04T11:59:23Z",
+          "completed_at": "2026-09-04T12:34:18Z"
+        },
+        {
+          "number": 5,
+          "name": "Send Notification",
+          "conclusion": "success",
+          "started_at": "2026-09-04T12:34:18Z",
+          "completed_at": "2026-09-04T12:34:20Z"
+        },
+        {
+          "number": 9,
+          "name": "Post Build",
+          "conclusion": "success",
+          "started_at": "2026-09-04T12:34:20Z",
+          "completed_at": "2026-09-04T12:34:22Z"
+        },
+        {
+          "number": 10,
+          "name": "Post Check Out Code",
+          "conclusion": "success",
+          "started_at": "2026-09-04T12:34:22Z",
+          "completed_at": "2026-09-04T12:34:24Z"
+        },
+        {
+          "number": 11,
+          "name": "Complete job",
+          "conclusion": "success",
+          "started_at": "2026-09-04T12:34:24Z",
+          "completed_at": "2026-09-04T12:34:24Z"
+        }
+      ]
+    },
+    {
+      "id": 101015071948,
+      "name": "Linux | Java 17",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-09-04T11:59:08Z",
+      "completed_at": "2026-09-04T13:33:50Z",
+      "runner_name": "GitHub Actions 1008632868",
+      "html_url": "https://github.com/spring-projects/spring-boot/actions/runs/33870500493/job/101015071948",
+      "steps": [
+        {
+          "number": 1,
+          "name": "Set up job",
+          "conclusion": "success",
+          "started_at": "2026-09-04T11:59:09Z",
+          "completed_at": "2026-09-04T11:59:10Z"
+        },
+        {
+          "number": 2,
+          "name": "Prepare Windows runner",
+          "conclusion": "skipped",
+          "started_at": "2026-09-04T11:59:10Z",
+          "completed_at": "2026-09-04T11:59:10Z"
+        },
+        {
+          "number": 3,
+          "name": "Check Out Code",
+          "conclusion": "success",
+          "started_at": "2026-09-04T11:59:10Z",
+          "completed_at": "2026-09-04T11:59:13Z"
+        },
+        {
+          "number": 4,
+          "name": "Build",
+          "conclusion": "success",
+          "started_at": "2026-09-04T11:59:13Z",
+          "completed_at": "2026-09-04T13:33:45Z"
+        },
+        {
+          "number": 5,
+          "name": "Send Notification",
+          "conclusion": "success",
+          "started_at": "2026-09-04T13:33:45Z",
+          "completed_at": "2026-09-04T13:33:45Z"
+        },
+        {
+          "number": 9,
+          "name": "Post Build",
+          "conclusion": "success",
+          "started_at": "2026-09-04T13:33:45Z",
+          "completed_at": "2026-09-04T13:33:47Z"
+        },
+        {
+          "number": 10,
+          "name": "Post Check Out Code",
+          "conclusion": "success",
+          "started_at": "2026-09-04T13:33:47Z",
+          "completed_at": "2026-09-04T13:33:47Z"
+        },
+        {
+          "number": 11,
+          "name": "Complete job",
+          "conclusion": "success",
+          "started_at": "2026-09-04T13:33:47Z",
+          "completed_at": "2026-09-04T13:33:47Z"
+        }
+      ]
+    },
+    {
+      "id": 101015071963,
+      "name": "Linux | Java 27",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-09-04T11:59:08Z",
+      "completed_at": "2026-09-04T13:22:56Z",
+      "runner_name": "GitHub Actions 1008632866",
+      "html_url": "https://github.com/spring-projects/spring-boot/actions/runs/33870500493/job/101015071963",
+      "steps": [
+        {
+          "number": 1,
+          "name": "Set up job",
+          "conclusion": "success",
+          "started_at": "2026-09-04T11:59:08Z",
+          "completed_at": "2026-09-04T11:59:09Z"
+        },
+        {
+          "number": 2,
+          "name": "Prepare Windows runner",
+          "conclusion": "skipped",
+          "started_at": "2026-09-04T11:59:09Z",
+          "completed_at": "2026-09-04T11:59:09Z"
+        },
+        {
+          "number": 3,
+          "name": "Check Out Code",
+          "conclusion": "success",
+          "started_at": "2026-09-04T11:59:09Z",
+          "completed_at": "2026-09-04T11:59:14Z"
+        },
+        {
+          "number": 4,
+          "name": "Build",
+          "conclusion": "success",
+          "started_at": "2026-09-04T11:59:14Z",
+          "completed_at": "2026-09-04T13:22:52Z"
+        },
+        {
+          "number": 5,
+          "name": "Send Notification",
+          "conclusion": "success",
+          "started_at": "2026-09-04T13:22:52Z",
+          "completed_at": "2026-09-04T13:22:52Z"
+        },
+        {
+          "number": 9,
+          "name": "Post Build",
+          "conclusion": "success",
+          "started_at": "2026-09-04T13:22:52Z",
+          "completed_at": "2026-09-04T13:22:53Z"
+        },
+        {
+          "number": 10,
+          "name": "Post Check Out Code",
+          "conclusion": "success",
+          "started_at": "2026-09-04T13:22:53Z",
+          "completed_at": "2026-09-04T13:22:53Z"
+        },
+        {
+          "number": 11,
+          "name": "Complete job",
+          "conclusion": "success",
+          "started_at": "2026-09-04T13:22:53Z",
+          "completed_at": "2026-09-04T13:22:53Z"
+        }
+      ]
+    },
+    {
+      "id": 101015071967,
+      "name": "Windows | Java 17",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-09-04T11:59:07Z",
+      "completed_at": "2026-09-04T13:15:09Z",
+      "runner_name": "GitHub Actions 1008632860",
+      "html_url": "https://github.com/spring-projects/spring-boot/actions/runs/33870500493/job/101015071967",
+      "steps": [
+        {
+          "number": 1,
+          "name": "Set up job",
+          "conclusion": "success",
+          "started_at": "2026-09-04T11:59:09Z",
+          "completed_at": "2026-09-04T11:59:10Z"
+        },
+        {
+          "number": 2,
+          "name": "Prepare Windows runner",
+          "conclusion": "success",
+          "started_at": "2026-09-04T11:59:10Z",
+          "completed_at": "2026-09-04T11:59:26Z"
+        },
+        {
+          "number": 3,
+          "name": "Check Out Code",
+          "conclusion": "success",
+          "started_at": "2026-09-04T11:59:26Z",
+          "completed_at": "2026-09-04T11:59:38Z"
+        },
+        {
+          "number": 4,
+          "name": "Build",
+          "conclusion": "success",
+          "started_at": "2026-09-04T11:59:38Z",
+          "completed_at": "2026-09-04T13:15:02Z"
+        },
+        {
+          "number": 5,
+          "name": "Send Notification",
+          "conclusion": "success",
+          "started_at": "2026-09-04T13:15:02Z",
+          "completed_at": "2026-09-04T13:15:03Z"
+        },
+        {
+          "number": 9,
+          "name": "Post Build",
+          "conclusion": "success",
+          "started_at": "2026-09-04T13:15:03Z",
+          "completed_at": "2026-09-04T13:15:05Z"
+        },
+        {
+          "number": 10,
+          "name": "Post Check Out Code",
+          "conclusion": "success",
+          "started_at": "2026-09-04T13:15:05Z",
+          "completed_at": "2026-09-04T13:15:08Z"
+        },
+        {
+          "number": 11,
+          "name": "Complete job",
+          "conclusion": "success",
+          "started_at": "2026-09-04T13:15:08Z",
+          "completed_at": "2026-09-04T13:15:08Z"
+        }
+      ]
+    },
+    {
+      "id": 101015071971,
+      "name": "Linux | Java 26",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-09-04T11:59:07Z",
+      "completed_at": "2026-09-04T13:19:29Z",
+      "runner_name": "GitHub Actions 1008632867",
+      "html_url": "https://github.com/spring-projects/spring-boot/actions/runs/33870500493/job/101015071971",
+      "steps": [
+        {
+          "number": 1,
+          "name": "Set up job",
+          "conclusion": "success",
+          "started_at": "2026-09-04T11:59:08Z",
+          "completed_at": "2026-09-04T11:59:08Z"
+        },
+        {
+          "number": 2,
+          "name": "Prepare Windows runner",
+          "conclusion": "skipped",
+          "started_at": "2026-09-04T11:59:09Z",
+          "completed_at": "2026-09-04T11:59:09Z"
+        },
+        {
+          "number": 3,
+          "name": "Check Out Code",
+          "conclusion": "success",
+          "started_at": "2026-09-04T11:59:09Z",
+          "completed_at": "2026-09-04T11:59:12Z"
+        },
+        {
+          "number": 4,
+          "name": "Build",
+          "conclusion": "success",
+          "started_at": "2026-09-04T11:59:12Z",
+          "completed_at": "2026-09-04T13:19:26Z"
+        },
+        {
+          "number": 5,
+          "name": "Send Notification",
+          "conclusion": "success",
+          "started_at": "2026-09-04T13:19:26Z",
+          "completed_at": "2026-09-04T13:19:27Z"
+        },
+        {
+          "number": 9,
+          "name": "Post Build",
+          "conclusion": "success",
+          "started_at": "2026-09-04T13:19:27Z",
+          "completed_at": "2026-09-04T13:19:28Z"
+        },
+        {
+          "number": 10,
+          "name": "Post Check Out Code",
+          "conclusion": "success",
+          "started_at": "2026-09-04T13:19:28Z",
+          "completed_at": "2026-09-04T13:19:28Z"
+        },
+        {
+          "number": 11,
+          "name": "Complete job",
+          "conclusion": "success",
+          "started_at": "2026-09-04T13:19:28Z",
+          "completed_at": "2026-09-04T13:19:28Z"
+        }
+      ]
+    },
+    {
+      "id": 101015072048,
+      "name": "Windows | Java 25",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-09-04T11:59:07Z",
+      "completed_at": "2026-09-04T13:05:58Z",
+      "runner_name": "GitHub Actions 1008632872",
+      "html_url": "https://github.com/spring-projects/spring-boot/actions/runs/33870500493/job/101015072048",
+      "steps": [
+        {
+          "number": 1,
+          "name": "Set up job",
+          "conclusion": "success",
+          "started_at": "2026-09-04T11:59:08Z",
+          "completed_at": "2026-09-04T11:59:09Z"
+        },
+        {
+          "number": 2,
+          "name": "Prepare Windows runner",
+          "conclusion": "success",
+          "started_at": "2026-09-04T11:59:09Z",
+          "completed_at": "2026-09-04T11:59:11Z"
+        },
+        {
+          "number": 3,
+          "name": "Check Out Code",
+          "conclusion": "success",
+          "started_at": "2026-09-04T11:59:11Z",
+          "completed_at": "2026-09-04T11:59:22Z"
+        },
+        {
+          "number": 4,
+          "name": "Build",
+          "conclusion": "success",
+          "started_at": "2026-09-04T11:59:22Z",
+          "completed_at": "2026-09-04T13:05:51Z"
+        },
+        {
+          "number": 5,
+          "name": "Send Notification",
+          "conclusion": "success",
+          "started_at": "2026-09-04T13:05:51Z",
+          "completed_at": "2026-09-04T13:05:52Z"
+        },
+        {
+          "number": 9,
+          "name": "Post Build",
+          "conclusion": "success",
+          "started_at": "2026-09-04T13:05:52Z",
+          "completed_at": "2026-09-04T13:05:54Z"
+        },
+        {
+          "number": 10,
+          "name": "Post Check Out Code",
+          "conclusion": "success",
+          "started_at": "2026-09-04T13:05:54Z",
+          "completed_at": "2026-09-04T13:05:56Z"
+        },
+        {
+          "number": 11,
+          "name": "Complete job",
+          "conclusion": "success",
+          "started_at": "2026-09-04T13:05:56Z",
+          "completed_at": "2026-09-04T13:05:57Z"
+        }
+      ]
+    }
+  ]
+}
