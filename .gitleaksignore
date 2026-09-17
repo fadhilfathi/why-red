@@ -1,7 +1,14 @@
 # Verified false positives only, each with the reason inline. Never add an entry
 # without reading the flagged line first (see CONTRIBUTING.md).
 
-# buildkit snapshotter internal key ID ("key=qfdlg1g9dj8zy1vufy209pwr0"), not a
-# credential -- confirmed by reading the surrounding debug log line, which is a
-# "remove snapshot" trace message.
+# buildkit snapshotter internal key ID (a "key=<random-looking id>" value on a
+# "remove snapshot" debug trace line), not a credential -- confirmed by reading
+# the surrounding log line. The id itself is not repeated here so this file
+# does not become a second match for the same string.
 fixtures/cases/moby-vendoring-mismatch/105009844801.log:generic-api-key:3111
+
+# Historical: an earlier commit's comment here quoted the same buildkit
+# snapshotter key id as documentation. Not a secret (see above); the id was
+# removed from this file's text in a later commit so it does not recur, but
+# the old commit is already public history.
+d214e0fbde131babea58c514580d6d6d6246c593:.gitleaksignore:generic-api-key:4
